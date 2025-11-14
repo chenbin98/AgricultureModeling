@@ -320,7 +320,11 @@ class NavigationApp {
         // 云同步设置
         const syncSettingsBtn = document.getElementById('syncSettingsBtn');
         syncSettingsBtn.addEventListener('click', () => {
-            this.showSyncSettingsModal();
+            if (this.gistId && this.gistPat) {
+                this.syncData();
+            } else {
+                this.showSyncSettingsModal();
+            }
         });
 
         // 侧边栏切换（移动端）
@@ -796,6 +800,11 @@ class NavigationApp {
         this.filterBookmarks();
     }
 
+    syncData() {
+        alert('正在同步...');
+        this.saveData();
+    }
+
     showSyncSettingsModal() {
         const lastSyncDate = this.lastSync ? new Date(this.lastSync).toLocaleString() : '从未';
         const modalContent = `
@@ -1209,6 +1218,7 @@ class NavigationApp {
                 console.log('同步到 Gist 成功');
                 this.lastSync = new Date().toISOString();
                 localStorage.setItem('agri_last_sync', this.lastSync);
+                alert('同步成功');
             }).catch(error => {
                 console.error('同步到 Gist 失败:', error);
                 alert('同步到云端失败，数据已保存到本地。');
