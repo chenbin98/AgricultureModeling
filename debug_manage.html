@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理模式调试</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .debug-info {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .force-manage {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="debug-info">
+            <h3>调试信息</h3>
+            <p>当前CSS变量值：</p>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const root = getComputedStyle(document.documentElement);
+                    const variables = [
+                        '--bg-primary',
+                        '--text-primary',
+                        '--text-secondary',
+                        '--accent-color'
+                    ];
+
+                    variables.forEach(variable => {
+                        const value = root.getPropertyValue(variable);
+                        console.log(`${variable}: ${value}`);
+                        document.write(`<p>${variable}: ${value}</p>`);
+                    });
+                });
+            </script>
+        </div>
+
+        <!-- 正常状态 -->
+        <div class="sidebar">
+            <h3>正常状态</h3>
+            <div class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-folder"></i>
+                    <span class="nav-text">测试分类</span>
+                    <span class="nav-count">5</span>
+                    <button class="nav-toggle">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- 管理模式状态 -->
+        <div class="sidebar" style="margin-top: 20px;">
+            <h3>管理模式状态</h3>
+            <div class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-folder"></i>
+                    <span class="nav-text">测试分类</span>
+                    <span class="nav-count">5</span>
+                    <button class="nav-toggle">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="nav-manage-btn" data-type="category" data-category="0">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- 强制管理模式类 -->
+        <div class="sidebar manage-mode" style="margin-top: 20px;">
+            <h3>强制manage-mode类</h3>
+            <div class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-folder"></i>
+                    <span class="nav-text">测试分类</span>
+                    <span class="nav-count">5</span>
+                    <button class="nav-toggle">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="nav-manage-btn" data-type="category" data-category="0">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div style="padding: 20px;">
+            <button onclick="document.body.classList.toggle('manage-mode')">
+                切换管理模式
+            </button>
+            <button onclick="testVisibility()">
+                测试可见性
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function testVisibility() {
+            const navTexts = document.querySelectorAll('.nav-text');
+            console.log('nav-text elements found:', navTexts.length);
+            navTexts.forEach((element, index) => {
+                const styles = getComputedStyle(element);
+                console.log(`Element ${index}:`, {
+                    display: styles.display,
+                    visibility: styles.visibility,
+                    opacity: styles.opacity,
+                    color: styles.color
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(testVisibility, 1000);
+        });
+    </script>
+</body>
+</html>

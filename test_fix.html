@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理模式修复测试</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { padding: 20px; }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid var(--border-color, #dee2e6);
+            border-radius: 5px;
+        }
+        .test-button {
+            background: var(--primary-color, #2d5a4f);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>管理模式修复测试</h1>
+
+    <div class="test-section">
+        <h3>测试1: 点击按钮切换管理模式</h3>
+        <p>点击下面的按钮测试管理模式切换，观察导航项的文本是否保持可见：</p>
+        <button class="test-button" onclick="toggleManageMode()">切换管理模式</button>
+        <button class="test-button" onclick="testWithSampleData()">使用示例数据测试</button>
+    </div>
+
+    <div class="sidebar" id="testSidebar">
+        <h3>导航测试</h3>
+        <div id="navTree">
+            <!-- 导航项将通过JavaScript生成 -->
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h3>测试结果</h3>
+        <div id="testResult">
+            <p>等待测试...</p>
+        </div>
+    </div>
+
+    <script>
+        let isManageMode = false;
+        let testBookmarks = [
+            {
+                category: '测试分类1',
+                subcategories: [
+                    {
+                        name: '子分类1',
+                        icon: 'fas fa-folder',
+                        items: [
+                            { title: '测试链接1', url: '#', description: '测试描述1' },
+                            { title: '测试链接2', url: '#', description: '测试描述2' }
+                        ]
+                    }
+                ]
+            },
+            {
+                category: '测试分类2',
+                subcategories: [
+                    {
+                        name: '子分类2',
+                        icon: 'fas fa-folder',
+                        items: [
+                            { title: '测试链接3', url: '#', description: '测试描述3' }
+                        ]
+                    }
+                ]
+            }
+        ];
+
+        function renderNavTree() {
+            const navTree = document.getElementById('navTree');
+            navTree.innerHTML = '';
+
+            testBookmarks.forEach((category, index) => {
+                const totalItems = category.subcategories.reduce((sum, sub) => sum + sub.items.length, 0);
+
+                const navItem = document.createElement('div');
+                navItem.className = 'nav-item';
+                navItem.setAttribute('data-category-index', index);
+                navItem.innerHTML = `
+                    <a href="#" class="nav-link" data-category="${index}">
+                        <i class="nav-icon fas fa-folder"></i>
+                        <span class="nav-text">${category.category}</span>
+                        <span class="nav-count">${totalItems}</span>
+                        <button class="nav-toggle">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        ${isManageMode ? `<button class="nav-manage-btn" data-type="category" data-category="${index}"><i class="fas fa-ellipsis-v"></i></button>` : ''}
+                    </a>
+                    <div class="nav-submenu">
+                        ${category.subcategories.map((sub, subIndex) => `
+                            <div class="nav-item">
+                                <a href="#" class="nav-link" data-category="${index}" data-subcategory="${subIndex}">
+                                    <i class="nav-icon ${sub.icon}"></i>
+                                    <span class="nav-text">${sub.name}</span>
+                                    <span class="nav-count">${sub.items.length}</span>
+                                    ${isManageMode ? `<button class="nav-manage-btn" data-type="subcategory" data-category="${index}" data-subcategory="${subIndex}"><i class="fas fa-ellipsis-v"></i></button>` : ''}
+                                </a>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                navTree.appendChild(navItem);
+            });
+        }
+
+        function toggleManageMode() {
+            isManageMode = !isManageMode;
+            const body = document.body;
+
+            if (isManageMode) {
+                body.classList.add('manage-mode');
+            } else {
+                body.classList.remove('manage-mode');
+            }
+
+            // 重新渲染
+            renderNavTree();
+
+            // 测试文本可见性
+            testTextVisibility();
+        }
+
+        function testTextVisibility() {
+            const navTexts = document.querySelectorAll('.nav-text');
+            let visibleCount = 0;
+            let hiddenCount = 0;
+
+            navTexts.forEach((element, index) => {
+                const styles = getComputedStyle(element);
+                const isVisible = styles.display !== 'none' &&
+                               styles.visibility !== 'hidden' &&
+                               parseFloat(styles.opacity) > 0;
+
+                if (isVisible) {
+                    visibleCount++;
+                } else {
+                    hiddenCount++;
+                }
+
+                console.log(`Text ${index} (${element.textContent}):`, {
+                    display: styles.display,
+                    visibility: styles.visibility,
+                    opacity: styles.opacity,
+                    color: styles.color,
+                    isVisible: isVisible
+                });
+            });
+
+            const resultDiv = document.getElementById('testResult');
+            resultDiv.innerHTML = `
+                <p><strong>测试结果：</strong></p>
+                <p>✅ 可见的文本: ${visibleCount} 个</p>
+                <p>❌ 隐藏的文本: ${hiddenCount} 个</p>
+                <p>📊 管理模式: ${isManageMode ? '开启' : '关闭'}</p>
+                <p>🎯 状态: ${hiddenCount === 0 ? '✅ 通过' : '❌ 失败'}</p>
+            `;
+        }
+
+        function testWithSampleData() {
+            renderNavTree();
+            testTextVisibility();
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            renderNavTree();
+            setTimeout(testTextVisibility, 100);
+        });
+    </script>
+</body>
+</html>

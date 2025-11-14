@@ -643,6 +643,24 @@ body {
     padding-right: 3rem;
 }
 
+/* 确保管理模式下文本始终可见 */
+.manage-mode .nav-text {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: var(--text-primary) !important;
+    flex: 1 !important;
+}
+
+/* 确保子分类文本也可见 */
+.manage-mode .nav-submenu .nav-text {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: var(--text-primary) !important;
+    flex: 1 !important;
+}
+
 .nav-manage-btn {
     position: absolute;
     right: 0.5rem;

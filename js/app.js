@@ -756,10 +756,16 @@ class NavigationApp {
 
         // 保存当前选择状态
         const currentSelection = this.currentCategory;
+        const currentSubcategory = this.currentSubcategory;
 
         // 重新渲染以显示/隐藏管理按钮
         this.renderNavTree();
         this.renderBookmarks();
+
+        // 恢复之前的选择状态
+        if (currentSelection !== null) {
+            this.selectCategory(currentSelection.categoryIndex, currentSelection.subcategoryIndex);
+        }
     }
 
     showAddCategoryModal() {
