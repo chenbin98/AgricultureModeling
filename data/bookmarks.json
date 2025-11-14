@@ -1,0 +1,2943 @@
+[
+  {
+    "title": "综合资源",
+    "icon": "fas fa-folder",
+    "subcategories": [
+      {
+        "title": "壁纸资源",
+        "icon": "fas fa-image",
+        "links": [
+          {
+            "title": "很棒的壁纸-wallhaven.cc",
+            "url": "https://wallhaven.cc/",
+            "description": "wallhaven.cc"
+          },
+          {
+            "title": "必应每日高清壁纸-精彩，从这里开始",
+            "url": "https://bing.ioliu.cn/",
+            "description": "精彩，从这里开始"
+          },
+          {
+            "title": "HD/4K/5K Resolution Wallpapers/Backgrounds ▪ Wallroom.io",
+            "url": "https://wallroom.io/",
+            "description": "Wallroom.io"
+          },
+          {
+            "title": "热门壁纸| WallpaperUP",
+            "url": "https://www.wallpaperup.com/",
+            "description": "WallpaperUP"
+          },
+          {
+            "title": "电脑壁纸",
+            "url": "http://lab.mkblog.cn/wallpaper/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "图片",
+        "icon": "fas fa-photo-video",
+        "links": [
+          {
+            "title": "Hippopx - beautiful free stock photos",
+            "url": "https://www.hippopx.com/",
+            "description": "beautiful free stock photos"
+          },
+          {
+            "title": "艺术家-免费的高分辨率照片",
+            "url": "https://gratisography.com/",
+            "description": "免费的高分辨率照片"
+          },
+          {
+            "title": "Visual Hunt全图",
+            "url": "https://visualhunt.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "的-Magdeleine-颜色找图",
+            "url": "https://magdeleine.co/browse/",
+            "description": "Magdeleine-颜色找图"
+          },
+          {
+            "title": "免费图片视频·Pexels",
+            "url": "https://www.pexels.com/",
+            "description": "Pexels"
+          },
+          {
+            "title": "图标下载，ICON(SVG/PNG/ICO/ICNS)图标搜索下载 - Easyicon",
+            "url": "https://www.easyicon.net/",
+            "description": "Easyicon"
+          },
+          {
+            "title": "图片，矢量图，插图，视频",
+            "url": "https://pixabay.com/videos/",
+            "description": "相关资源"
+          },
+          {
+            "title": "千图网",
+            "url": "https://www.58pic.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "千图网",
+            "url": "https://www.58pic.com/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "软件下载",
+        "icon": "fas fa-download",
+        "links": [
+          {
+            "title": "软件下载",
+            "url": "http://www.pc6.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "小众软件 - 分享免费、小巧、实用、有趣、绿色的软件",
+            "url": "https://www.appinn.com/",
+            "description": "分享免费、小巧、实用、有趣、绿色的软件"
+          }
+        ]
+      },
+      {
+        "title": "视频",
+        "icon": "fas fa-video",
+        "links": [
+          {
+            "title": "自由运动背景| MP4，MOV视频背景免费！",
+            "url": "https://www.ignitemotion.com/",
+            "description": "MP4，MOV视频背景免费！"
+          },
+          {
+            "title": "通道，特效视频素材",
+            "url": "https://footagecrate.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Totally Free Stock Video Footage - Vidsplay.com",
+            "url": "https://www.vidsplay.com/",
+            "description": "Vidsplay.com"
+          },
+          {
+            "title": "人物视频，剪辑",
+            "url": "https://www.videvo.net/",
+            "description": "相关资源"
+          },
+          {
+            "title": "VideoFk免费在线视频下载 - 网页视频下载工具",
+            "url": "https://www.videofk.com/",
+            "description": "网页视频下载工具"
+          }
+        ]
+      },
+      {
+        "title": "动画",
+        "icon": "fas fa-play-circle",
+        "links": []
+      },
+      {
+        "title": "声音",
+        "icon": "fas fa-music",
+        "links": [
+          {
+            "title": "背景，电影，戏剧，音乐剪辑",
+            "url": "https://royalty-free-music.bandcamp.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Robbery by Juice WRLD音乐",
+            "url": "https://soundcloud.com/discover",
+            "description": "相关资源"
+          },
+          {
+            "title": "Looperman的精选歌曲，乐曲，曲目，乐器和混音",
+            "url": "https://www.looperman.com/tracks/featured",
+            "description": "相关资源"
+          },
+          {
+            "title": "Freesound-各种声音",
+            "url": "https://freesound.org/search/?q=&f=&s=created+desc",
+            "description": "各种声音"
+          },
+          {
+            "title": "感知是偶然的",
+            "url": "https://cctrax.com/#",
+            "description": "相关资源"
+          },
+          {
+            "title": "bensound",
+            "url": "https://www.bensound.com/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "ps矢量图",
+        "icon": "fas fa-vector-square",
+        "links": [
+          {
+            "title": "【在线PS】PS软件网页版，ps在线图片处理工具photopea-稿定设计PS",
+            "url": "https://ps.gaoding.com/#/",
+            "description": "稿定设计PS"
+          },
+          {
+            "title": "Free vector icons 矢图",
+            "url": "https://www.flaticon.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "主页 - Canva",
+            "url": "https://www.canva.cn/",
+            "description": "Canva"
+          },
+          {
+            "title": "名片设计模板_海报设计_PPT模板_微信图片_模板素材库_创客贴",
+            "url": "https://www.chuangkit.com/templatecenter",
+            "description": "相关资源"
+          },
+          {
+            "title": "ARKIE作图 - 作个有尊严的图",
+            "url": "https://www.arkie.cn/welcome",
+            "description": "作个有尊严的图"
+          },
+          {
+            "title": "创客贴_广告设计印刷_图片一键生成_设计图片素材大全",
+            "url": "https://www.chuangkit.com/designtools/startdesign?utm_source=360%E6%90%9C%E7%B4%A2&utm_medium=cpc&utm_campaign=%E5%93%81%E7%89%8C%E8%AF%8D&utm_content=%E5%88%9B%E5%AE%A2%E8%B4%B4&utm_term=%E5%88%9B%E5%AE%A2%E8%B4%B4%E5%AE%98%E7%BD%91",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "logo",
+        "icon": "fas fa-copyright",
+        "links": [
+          {
+            "title": "ShapeFactory 设计logo，pigment ，gradient，duotone",
+            "url": "https://shapefactory.co/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "图标",
+        "icon": "fas fa-icons",
+        "links": [
+          {
+            "title": "Free Vectors, Stock Photos & PSD Downloads | Freepik",
+            "url": "https://www.freepik.com/",
+            "description": "Freepik"
+          },
+          {
+            "title": "8,425,000+ free and premium vector icons, illustrations and 3D illustrations",
+            "url": "https://www.iconfinder.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Iconfont-阿里巴巴矢量图标库",
+            "url": "https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2",
+            "description": "阿里巴巴矢量图标库"
+          }
+        ]
+      },
+      {
+        "title": "免费字体",
+        "icon": "fas fa-font",
+        "links": [
+          {
+            "title": "免费字体下载,中文字体授权_字体家官网",
+            "url": "https://www.zitijia.com/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "图书资源",
+        "icon": "fas fa-book",
+        "links": [
+          {
+            "title": "全部电子书_免费壹佰分学习网-考试资料真题试卷讲义笔记",
+            "url": "http://free.100xuexi.com/Org/Index.aspx",
+            "description": "考试资料真题试卷讲义笔记"
+          },
+          {
+            "title": "百度脑图－便捷的思维工具",
+            "url": "https://naotu.baidu.com/home",
+            "description": "便捷的思维工具"
+          },
+          {
+            "title": "迅捷画图官网 - 专业的思维导图 | 流程图制作网站",
+            "url": "https://www.liuchengtu.com/",
+            "description": "专业的思维导图 | 流程图制作网站"
+          },
+          {
+            "title": "公众号",
+            "url": "https://mp.weixin.qq.com/cgi-bin/home?t=home/index&lang=zh_CN&token=2031238533",
+            "description": "相关资源"
+          },
+          {
+            "title": "七味 - 七味网",
+            "url": "https://www.qmp4.com/",
+            "description": "七味网"
+          },
+          {
+            "title": "片库 - 全网高清影视聚合下载,电影免费在线观看,片库网",
+            "url": "https://www.pkmp4.com/",
+            "description": "全网高清影视聚合下载,电影免费在线观看,片库网"
+          },
+          {
+            "title": "茶杯狐 Cupfox - 努力让找电影变得简单",
+            "url": "https://cupfox.app/",
+            "description": "努力让找电影变得简单"
+          },
+          {
+            "title": "Game of Thrones (2011) | Watch Online Free | BoredFlix",
+            "url": "https://www.boredflix.com/tv/1399/game-of-thrones",
+            "description": "Watch Online Free | BoredFlix"
+          }
+        ]
+      },
+      {
+        "title": "pdf下载",
+        "icon": "fas fa-file-pdf",
+        "links": [
+          {
+            "title": "PDFDrive – PDF Drive is the world’s largest Book Database!",
+            "url": "https://pdfdrive.to/en",
+            "description": "相关资源"
+          },
+          {
+            "title": "Library Genesis",
+            "url": "https://libgen.li/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Jiumo Search 鸠摩搜索 - 文档搜索引擎",
+            "url": "https://www.jiumodiary.com/",
+            "description": "文档搜索引擎"
+          },
+          {
+            "title": "熊猫搜书_熊猫搜索_一站式读书学习导航站_聚合电子书及文档搜索_xmsoushu_xmsearch",
+            "url": "https://xmsoushu.com/#/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Python Multiplication Table Code",
+            "url": "https://chat.openai.com/chat/534bd012-9e2d-44bc-80a2-3b7c55d2d7ed",
+            "description": "相关资源"
+          },
+          {
+            "title": "Greasy Fork - 安全、实用的用户脚本大全",
+            "url": "https://greasyfork.org/zh-CN",
+            "description": "安全、实用的用户脚本大全"
+          },
+          {
+            "title": "快连 - 登录快连账户",
+            "url": "https://www.zuyhe.org/login",
+            "description": "登录快连账户"
+          },
+          {
+            "title": "dazidazi-在线打字练习-提高打字速度-打字测试-标准指法",
+            "url": "https://dazidazi.com/",
+            "description": "在线打字练习-提高打字速度-打字测试-标准指法"
+          }
+        ]
+      },
+      {
+        "title": "数据可视化",
+        "icon": "fas fa-chart-line",
+        "links": [
+          {
+            "title": "城市数据师手册 - 大数据123 | 大数据导航网，大数据网站、资源、案例有哪些？",
+            "url": "http://dashuju123.com/",
+            "description": "大数据123 | 大数据导航网，大数据网站、资源、案例有哪些？"
+          },
+          {
+            "title": "GeoHey|极海云",
+            "url": "http://geohey.com/data/private-data",
+            "description": "极海云"
+          },
+          {
+            "title": "卡托| 释放空间分析的力量",
+            "url": "https://carto.com/",
+            "description": "释放空间分析的力量"
+          },
+          {
+            "title": "BDP个人版-免费在线数据分析软件，数据可视化软件",
+            "url": "https://me.bdp.cn/home.html",
+            "description": "免费在线数据分析软件，数据可视化软件"
+          },
+          {
+            "title": "PWS Network Overview | Weather Underground",
+            "url": "https://www.wunderground.com/pws/overview",
+            "description": "Weather Underground"
+          },
+          {
+            "title": "让你忍不住想要动手收藏的—计算机组成原理总结_RodmaChen的博客-CSDN博客_https://blog.csdn.net/weixin_46654114/article/deta",
+            "url": "https://blog.csdn.net/weixin_46654114/article/details/105812651",
+            "description": "CSDN博客_https://blog.csdn.net/weixin_46654114/article/deta"
+          },
+          {
+            "title": "RAWGraphs2.0，简洁好用的图表可视化工具",
+            "url": "http://www.guihuayun.com/tools.php?id=23",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "ppt模板网站",
+        "icon": "fas fa-file-powerpoint",
+        "links": [
+          {
+            "title": "OfficePLUS，微软Office官方在线模板网站！",
+            "url": "http://www.officeplus.cn/List.shtml?cat=ppt",
+            "description": "相关资源"
+          },
+          {
+            "title": "mediclinic",
+            "url": "https://themeforest.net/item/mediclinic-a-multipurpose-health-and-medical-theme/19948268",
+            "description": "相关资源"
+          },
+          {
+            "title": "51PPT模板网",
+            "url": "http://www.51pptmoban.com/e/search/result/?searchid=32748",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "河科大",
+        "icon": "fas fa-university",
+        "links": [
+          {
+            "title": "河南科技大学学报：自然科学版",
+            "url": "http://www.lygx.cbpt.cnki.net/WKE/WebPublication/index.aspx?mid=lygx",
+            "description": "相关资源"
+          },
+          {
+            "title": "河南科技大学WEBVPN门户",
+            "url": "http://wvpn.haust.edu.cn/",
+            "description": "教育机构"
+          },
+          {
+            "title": "河南科技大学图书馆",
+            "url": "http://lib.haust.edu.cn/",
+            "description": "教育机构"
+          },
+          {
+            "title": "通知公告-教务处",
+            "url": "https://jwc.haust.edu.cn/tzgg.htm",
+            "description": "教务处"
+          },
+          {
+            "title": "aTrust",
+            "url": "https://vpn.haust.edu.cn/portal/service_center.html#/app_center",
+            "description": "教育机构"
+          },
+          {
+            "title": "河南科技大学教学管理系统",
+            "url": "https://jwgl-haust-edu-cn-s.haust.edu.cn/eams/loginExt.action;jsessionid=D239824F2C9FD4C6B1881E7A66DB7BE6.node1",
+            "description": "教育机构"
+          }
+        ]
+      },
+      {
+        "title": "期刊收集",
+        "icon": "fas fa-bookmark",
+        "links": []
+      },
+      {
+        "title": "RS算法类期刊",
+        "icon": "fas fa-satellite",
+        "links": [
+          {
+            "title": "IEEE Geoscience and Remote Sensing Magazine",
+            "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6245518",
+            "description": "相关资源"
+          },
+          {
+            "title": "TGRS",
+            "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36",
+            "description": "相关资源"
+          },
+          {
+            "title": "JSTAR",
+            "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4609443",
+            "description": "相关资源"
+          },
+          {
+            "title": "TGRSL",
+            "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8859",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "地学大类期刊",
+        "icon": "fas fa-globe",
+        "links": [
+          {
+            "title": "AGU | Advancing Earth and space science",
+            "url": "https://www.agu.org/",
+            "description": "Advancing Earth and space science"
+          },
+          {
+            "title": "1区-CATENA | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/catena",
+            "description": "CATENA | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "1区-Geoderma-土壤-好期刊-土壤",
+            "url": "https://www.sciencedirect.com/journal/geoderma",
+            "description": "Geoderma-土壤-好期刊-土壤"
+          },
+          {
+            "title": "3区-Computers & Geosciences | Journal | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/journal/computers-and-geosciences",
+            "description": "Computers & Geosciences | Journal | ScienceDirect.com"
+          },
+          {
+            "title": "1区-Global and Planetary Change | Journal | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/journal/global-and-planetary-change",
+            "description": "Global and Planetary Change | Journal | ScienceDirect.com"
+          },
+          {
+            "title": "Global Food Security - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/global-food-security",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Journal for Nature Conservation | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/journal-for-nature-conservation",
+            "description": "ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Earth's Future - Wiley Online Library",
+            "url": "https://agupubs.onlinelibrary.wiley.com/journal/23284277",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Journal of Geographical Sciences | Home",
+            "url": "https://www.springer.com/journal/11442/",
+            "description": "Home"
+          },
+          {
+            "title": "GeoHealth - Wiley Online Library",
+            "url": "https://agupubs.onlinelibrary.wiley.com/journal/24711403",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "不错-Geocarto International | Taylor & Francis Online",
+            "url": "https://www.tandfonline.com/journals/tgei20",
+            "description": "Geocarto International | Taylor & Francis Online"
+          },
+          {
+            "title": "Trends in Plant Science - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/trends-in-plant-science",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "好期刊-Earth-Science Reviews | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/earth-science-reviews/",
+            "description": "Earth-Science Reviews | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "iScience: Cell Press",
+            "url": "https://www.cell.com/iscience/home",
+            "description": "相关资源"
+          },
+          {
+            "title": "One Earth: Cell Press",
+            "url": "https://www.cell.com/one-earth/home",
+            "description": "相关资源"
+          },
+          {
+            "title": "Science China Earth Sciences - Springer",
+            "url": "https://link.springer.com/journal/11430",
+            "description": "Springer"
+          },
+          {
+            "title": "Pedosphere | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/pedosphere",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "二区-Journal of Advances in Modeling Earth Systems - Wiley Online Library",
+            "url": "https://agupubs.onlinelibrary.wiley.com/journal/19422466",
+            "description": "Journal of Advances in Modeling Earth Systems - Wiley Online Library"
+          },
+          {
+            "title": "Computers, Environment and Urban Systems | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/computers-environment-and-urban-systems",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Journal of Geophysical Research - Wiley Online Library",
+            "url": "https://agupubs.onlinelibrary.wiley.com/journal/21562202",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Journal of Cleaner Production - Elsevier",
+            "url": "https://www.journals.elsevier.com/journal-of-cleaner-production/",
+            "description": "Elsevier"
+          },
+          {
+            "title": "One Earth | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/one-earth/",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          }
+        ]
+      },
+      {
+        "title": "RS综合类期刊",
+        "icon": "fas fa-satellite-dish",
+        "links": [
+          {
+            "title": "4区-Advances in Space Research | Journal | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/journal/advances-in-space-research",
+            "description": "Advances in Space Research | Journal | ScienceDirect.com"
+          },
+          {
+            "title": "1区-Geoscience Frontiers | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/geoscience-frontiers",
+            "description": "Geoscience Frontiers | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Remote Sensing Applications: Society and Environment | Journal | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/journal/remote-sensing-applications-society-and-environment",
+            "description": "Journal | ScienceDirect.com"
+          },
+          {
+            "title": "1区-Science Bulletin | Journal | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/journal/science-bulletin",
+            "description": "Science Bulletin | Journal | ScienceDirect.com"
+          },
+          {
+            "title": "The Egyptian Journal of Remote Sensing and Space Sciences | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/the-egyptian-journal-of-remote-sensing-and-space-sciences",
+            "description": "ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "International Journal of Remote Sensing: Vol 42, No 1",
+            "url": "https://www.tandfonline.com/toc/tres20/current",
+            "description": "相关资源"
+          },
+          {
+            "title": "Remote Sensing Letters: Vol 12, No 1",
+            "url": "https://www.tandfonline.com/toc/trsl20/current",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "农业、土壤等期刊",
+        "icon": "fas fa-seedling",
+        "links": [
+          {
+            "title": "1区-European Journal of Agronomy | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/european-journal-of-agronomy",
+            "description": "European Journal of Agronomy | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Agricultural Systems - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/agricultural-systems",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Field Crops Research - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/field-crops-research/",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Agricultural and Forest Meteorology - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/agricultural-and-forest-meteorology",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Agriculture | An Open Access Journal from MDPI",
+            "url": "http://www.mdpi.com/journal/agriculture",
+            "description": "An Open Access Journal from MDPI"
+          },
+          {
+            "title": "Information Processing in Agriculture - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/information-processing-in-agriculture/",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Precision Agriculture | Home",
+            "url": "https://www.springer.com/journal/11119",
+            "description": "Home"
+          },
+          {
+            "title": "Journal of Integrative Agriculture",
+            "url": "https://www.journals.elsevier.com/journal-of-integrative-agriculture",
+            "description": "学术期刊"
+          },
+          {
+            "title": "Journal of the Science of Food and Agriculture - Wiley Online Library",
+            "url": "https://onlinelibrary.wiley.com/journal/10970010?systemMessage=Wiley+Online+Library+will+be+unavailable+17+Dec+from+10-13+GMT+for+IT+mai",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "1区-Agricultural Systems | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/agricultural-systems",
+            "description": "Agricultural Systems | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "1区-Agricultural Water Management | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/agricultural-water-management",
+            "description": "Agricultural Water Management | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "The Crop Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/the-crop-journal",
+            "description": "ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Crop and Environment | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/crop-and-environment",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Current Research in Food Science | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/current-research-in-food-science",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "1区-Field Crops Research | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/field-crops-research",
+            "description": "Field Crops Research | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Global Food Security | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/global-food-security",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Journal of Integrative Agriculture | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/journal-of-integrative-agriculture",
+            "description": "ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Rice Science | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/rice-science",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "2区-Frontiers in Plant Science",
+            "url": "https://www.frontiersin.org/journals/plant-science",
+            "description": "Frontiers in Plant Science"
+          },
+          {
+            "title": "Agricultural & Environmental Letters - Wiley Online Library",
+            "url": "https://acsess.onlinelibrary.wiley.com/journal/24719625",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Agronomy Journal - Wiley Online Library",
+            "url": "https://acsess.onlinelibrary.wiley.com/journal/14350645",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Ecological Informatics | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/ecological-informatics/",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Biosystems Engineering | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/biosystems-engineering",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Agriculture, Ecosystems & Environment - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/agriculture-ecosystems-and-environment/",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "1区-International Soil and Water Conservation Research | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/international-soil-and-water-conservation-research",
+            "description": "International Soil and Water Conservation Research | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "1区-Geoderma | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/geoderma/",
+            "description": "Geoderma | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Applied Soil Ecology | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/applied-soil-ecology",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          }
+        ]
+      },
+      {
+        "title": "生态、环境类期刊",
+        "icon": "fas fa-leaf",
+        "links": [
+          {
+            "title": "Energy - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/energy/",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Applied Energy - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/applied-energy",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Environmental Science & Technology (ACS Publications)",
+            "url": "https://pubs.acs.org/journal/esthag#",
+            "description": "相关资源"
+          },
+          {
+            "title": "Journal of Environmental Management - Elsevier",
+            "url": "https://www.journals.elsevier.com/journal-of-environmental-management/",
+            "description": "Elsevier"
+          },
+          {
+            "title": "Environmental Monitoring and Assessment - Springer",
+            "url": "https://link.springer.com/journal/10661",
+            "description": "Springer"
+          },
+          {
+            "title": "Global Biogeochemical Cycles - Wiley Online Library",
+            "url": "https://agupubs.onlinelibrary.wiley.com/journal/19449224",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Journal of Cleaner Production - Elsevier",
+            "url": "https://www.journals.elsevier.com/journal-of-cleaner-production",
+            "description": "Elsevier"
+          },
+          {
+            "title": "Environmental Research Letters - IOPscience",
+            "url": "http://iopscience.iop.org/journal/1748-9326",
+            "description": "IOPscience"
+          },
+          {
+            "title": "Environmental Science and Pollution Research - Springer",
+            "url": "https://link.springer.com/journal/11356",
+            "description": "Springer"
+          },
+          {
+            "title": "Land Degradation & Development - Wiley Online Library",
+            "url": "https://onlinelibrary.wiley.com/journal/1099145x",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Environmental Pollution - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/environmental-pollution/",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Journal of Hydrology - Elsevier",
+            "url": "https://www.journals.elsevier.com/journal-of-hydrology",
+            "description": "Elsevier"
+          },
+          {
+            "title": "Food Security - Springer",
+            "url": "https://link.springer.com/journal/12571",
+            "description": "Springer"
+          },
+          {
+            "title": "Advances in Agronomy | Book series | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/bookseries/advances-in-agronomy",
+            "description": "Book series | ScienceDirect.com"
+          },
+          {
+            "title": "International Journal of Climatology - Wiley Online Library",
+            "url": "https://rmets.onlinelibrary.wiley.com/journal/10970088",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Environmental Research Letters - IOPscience",
+            "url": "https://iopscience.iop.org/journal/1748-9326",
+            "description": "IOPscience"
+          },
+          {
+            "title": "Frontiers in Ecology and the Environment",
+            "url": "https://www.frontiersinecology.org/fron/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Regional Environmental Change - Springer",
+            "url": "https://link.springer.com/journal/10113",
+            "description": "Springer"
+          },
+          {
+            "title": "Global and Planetary Change | Journal | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/journal/global-and-planetary-change",
+            "description": "Journal | ScienceDirect.com"
+          },
+          {
+            "title": "Global and Planetary Change - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/global-and-planetary-change",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Climatic Change - Springer",
+            "url": "https://link.springer.com/journal/10584",
+            "description": "Springer"
+          },
+          {
+            "title": "Applied Geography | Journal | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/journal/applied-geography",
+            "description": "Journal | ScienceDirect.com"
+          },
+          {
+            "title": "Global Change Biology - Wiley Online Library",
+            "url": "https://www.onlinelibrary.wiley.com/journal/13652486",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Ecological Applications - Wiley Online Library",
+            "url": "https://esajournals.onlinelibrary.wiley.com/journal/19395582",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Computers in Biology and Medicine - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/computers-in-biology-and-medicine",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Land Use Policy - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/land-use-policy",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Global Change Biology - Wiley Online Library",
+            "url": "https://onlinelibrary.wiley.com/journal/13652486",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "2区-Environmental Modelling & Software - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/environmental-modelling-and-software/",
+            "description": "Environmental Modelling & Software - Journal - Elsevier"
+          },
+          {
+            "title": "Geophysical Research Letters - Wiley Online Library",
+            "url": "https://agupubs.onlinelibrary.wiley.com/journal/19448007",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Biosystems Engineering - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/biosystems-engineering",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Soil Biology and Biochemistry - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/soil-biology-and-biochemistry/",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Resources, Conservation & Recycling - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/resources-conservation-and-recycling/",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Ecotoxicology and Environmental Safety | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/ecotoxicology-and-environmental-safety",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Global Environmental Change - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/global-environmental-change",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Remote Sensing in Ecology and Conservation - Wiley Online Library",
+            "url": "https://zslpublications.onlinelibrary.wiley.com/journal/20563485",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "2区-Current Opinion in Environmental Sustainability | Journal | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/journal/current-opinion-in-environmental-sustainability",
+            "description": "Current Opinion in Environmental Sustainability | Journal | ScienceDirect.com"
+          },
+          {
+            "title": "NHESS - Home",
+            "url": "https://www.natural-hazards-and-earth-system-sciences.net/",
+            "description": "Home"
+          },
+          {
+            "title": "3区-Ecological Modelling | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/ecological-modelling",
+            "description": "Ecological Modelling | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Cell Press: Trends in Ecology & Evolution",
+            "url": "https://www.cell.com/trends/ecology-evolution/home",
+            "description": "相关资源"
+          },
+          {
+            "title": "顶刊-Environment International | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/environment-international/",
+            "description": "Environment International | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Resources, Conservation and Recycling | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/resources-conservation-and-recycling",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "2区-International Journal of Disaster Risk Reduction | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/international-journal-of-disaster-risk-reduction",
+            "description": "International Journal of Disaster Risk Reduction | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "1区-Agriculture, Ecosystems & Environment | Journal | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/journal/agriculture-ecosystems-and-environment",
+            "description": "Agriculture, Ecosystems & Environment | Journal | ScienceDirect.com"
+          },
+          {
+            "title": "3区-Ecological Informatics | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/ecological-informatics",
+            "description": "Ecological Informatics | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "2区-Ecological Indicators | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/ecological-indicators",
+            "description": "Ecological Indicators | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "2区-Ecological Engineering | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/ecological-engineering",
+            "description": "Ecological Engineering | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "3区-Global Ecology and Conservation | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/global-ecology-and-conservation",
+            "description": "Global Ecology and Conservation | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "1区-Landscape and Urban Planning | Journal | ScienceDirect.com",
+            "url": "https://www.sciencedirect.com/journal/landscape-and-urban-planning",
+            "description": "Landscape and Urban Planning | Journal | ScienceDirect.com"
+          },
+          {
+            "title": "2区-Journal of Environmental Management | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/journal-of-environmental-management",
+            "description": "Journal of Environmental Management | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "2区-Advances in Climate Change Research | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/advances-in-climate-change-research",
+            "description": "Advances in Climate Change Research | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "2区-Frontiers in Ecology and Evolution",
+            "url": "https://www.frontiersin.org/journals/ecology-and-evolution",
+            "description": "Frontiers in Ecology and Evolution"
+          },
+          {
+            "title": "顶刊-Sustainable Cities and Society | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/sustainable-cities-and-society",
+            "description": "Sustainable Cities and Society | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "1区-Environmental Pollution | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/environmental-pollution",
+            "description": "Environmental Pollution | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Journal of Hazardous Materials | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/journal-of-hazardous-materials",
+            "description": "ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Environmental Pollution | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/environmental-pollution#description",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Remote Sensing in Ecology and Conservation - Wiley Online Library",
+            "url": "https://zslpublications.onlinelibrary.wiley.com/journal/20563485?journalRedirectCheck=true",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Resources Policy | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/resources-policy",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "The Innovation: Cell Press",
+            "url": "https://www.cell.com/The-Innovation/home",
+            "description": "相关资源"
+          },
+          {
+            "title": "2区-Sustainability Science | Home",
+            "url": "https://www.springer.com/journal/11625",
+            "description": "Sustainability Science | Home"
+          },
+          {
+            "title": "一区-Building and Environment | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/building-and-environment",
+            "description": "Building and Environment | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "2区-Environmental Research Letters - IOPscience",
+            "url": "https://ersp.lib.whu.edu.cn/s/org/iop/iopscience/G.https/journal/1748-9326",
+            "description": "Environmental Research Letters - IOPscience"
+          }
+        ]
+      },
+      {
+        "title": "数据、产品类期刊",
+        "icon": "fas fa-database",
+        "links": [
+          {
+            "title": "ESSD - Home",
+            "url": "https://www.earth-system-science-data.net/",
+            "description": "Home"
+          },
+          {
+            "title": "Scientific Data",
+            "url": "https://www.nature.com/sdata/",
+            "description": "顶级学术期刊"
+          },
+          {
+            "title": "Hydrology and Earth System Sciences",
+            "url": "https://www.hydrology-and-earth-system-sciences.net/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "水体、水文等期刊",
+        "icon": "fas fa-water",
+        "links": [
+          {
+            "title": "Aquaculture - Journal - Elsevier",
+            "url": "https://www.journals.elsevier.com/aquaculture",
+            "description": "Journal - Elsevier"
+          },
+          {
+            "title": "Reviews in Aquaculture - Wiley Online Library",
+            "url": "https://onlinelibrary.wiley.com/journal/17535131",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "Water Resources Research - Wiley Online Library",
+            "url": "https://agupubs.onlinelibrary.wiley.com/journal/19447973",
+            "description": "Wiley Online Library"
+          },
+          {
+            "title": "1区-Journal of Hydrology | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/journal-of-hydrology",
+            "description": "Journal of Hydrology | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Journal of Hydrology X | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/journal-of-hydrology-x",
+            "description": "ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "1区-Aquaculture | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/aquaculture",
+            "description": "Aquaculture | Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Journal of Great Lakes Research | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/journal-of-great-lakes-research",
+            "description": "ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "Water Research | Journal | ScienceDirect.com by Elsevier",
+            "url": "https://www.sciencedirect.com/journal/water-research",
+            "description": "Journal | ScienceDirect.com by Elsevier"
+          },
+          {
+            "title": "arXiv.org e-Print archive",
+            "url": "https://arxiv.org/",
+            "description": "Print archive"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "学习",
+    "icon": "fas fa-folder",
+    "subcategories": [
+      {
+        "title": "书籍",
+        "icon": "fas fa-book-open",
+        "links": [
+          {
+            "title": "Geocomputation with Python",
+            "url": "https://py.geocompx.org/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Spatial Data Science",
+            "url": "https://r-spatial.org/book/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Chapter 9 Making maps with R | Geocomputation with R",
+            "url": "https://r.geocompx.org/adv-map",
+            "description": "Geocomputation with R"
+          },
+          {
+            "title": "ggplot2: Elegant Graphics for Data Analysis (3e)",
+            "url": "https://ggplot2-book.org/",
+            "description": "相关资源"
+          },
+          {
+            "title": "tidyverse优雅的处理数据",
+            "url": "file:///D:/Documents/qq_documents/2750315795/FileRecv/tidyverse.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "R Graphics Cookbook, 2nd edition",
+            "url": "https://r-graphics.org/",
+            "description": "相关资源"
+          },
+          {
+            "title": "F1 - Earth Engine Fundamentals and Applications - EEFA - Live Document - Google 文档",
+            "url": "https://docs.google.com/document/d/1dLSaGXlAnI0jK6LAB6F-gQLBA30NTT0pz1tovHfOmvI/edit?pli=1#heading=h.mm0ckpr9chy2",
+            "description": "Earth Engine Fundamentals and Applications - EEFA - Live Document - Google 文档"
+          },
+          {
+            "title": "网盘搜索-小白盘",
+            "url": "https://www.xiaobaipan.com/",
+            "description": "小白盘"
+          },
+          {
+            "title": "Geoprocessing with Python",
+            "url": "https://www.manning.com/books/geoprocessing-with-python?a_bid=c3bae5be&a_aid=geopy",
+            "description": "相关资源"
+          },
+          {
+            "title": "Home | Bookdown",
+            "url": "https://bookdown.org/",
+            "description": "Bookdown"
+          }
+        ]
+      },
+      {
+        "title": "R语言资料",
+        "icon": "fab fa-r-project",
+        "links": [
+          {
+            "title": "R语言教程",
+            "url": "https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/index.html",
+            "description": "教育机构"
+          },
+          {
+            "title": "Cookbook for R 中文版",
+            "url": "https://openbiox.github.io/Cookbook-for-R-Chinese/",
+            "description": "相关资源"
+          },
+          {
+            "title": "An Introduction to R",
+            "url": "https://cran.r-project.org/doc/manuals/R-intro.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "统计计算",
+            "url": "https://www.math.pku.edu.cn/teachers/lidf/docs/statcomp/html/_statcompbook/index.html",
+            "description": "教育机构"
+          },
+          {
+            "title": "金融时间序列分析讲义",
+            "url": "https://www.math.pku.edu.cn/teachers/lidf/course/fts/ftsnotes/html/_ftsnotes/index.html",
+            "description": "教育机构"
+          },
+          {
+            "title": "Efficient R programming",
+            "url": "https://bookdown.org/csgillespie/efficientR/",
+            "description": "相关资源"
+          },
+          {
+            "title": "1. Introducing GEE and Geemap — Geospatial Data Science with Earth Engine and Geemap",
+            "url": "https://book.geemap.org/chapters/01_introduction.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "4. Using Local Geospatial Data — Geospatial Data Science with Earth Engine and Geemap",
+            "url": "https://book.geemap.org/chapters/04_local_data.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "Blog | Extraction of raster values from point samples on Google Earth Engine (GEE)",
+            "url": "https://kaflekrishna.com.np/blog-detail/extraction-raster-values-point-samples-google-earth-engine-gee/",
+            "description": "Extraction of raster values from point samples on Google Earth Engine (GEE)"
+          }
+        ]
+      },
+      {
+        "title": "深度学习",
+        "icon": "fas fa-brain",
+        "links": [
+          {
+            "title": "《动手学深度学习》 — 动手学深度学习 2.0.0 documentation",
+            "url": "https://zh.d2l.ai/index.html",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "在线网课平台",
+        "icon": "fas fa-graduation-cap",
+        "links": [
+          {
+            "title": "雨课堂网页版",
+            "url": "https://www.yuketang.cn/web?index",
+            "description": "相关资源"
+          },
+          {
+            "title": "中国大学MOOC(慕课)_国家精品课程在线学习平台",
+            "url": "https://www.icourse163.org/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Python综合教程 - 虎课网",
+            "url": "https://huke88.com/comprehensive/5-0-2401-0-0-2-1-16-1/?sem=360PC&kw=109492",
+            "description": "虎课网"
+          },
+          {
+            "title": "学堂在线-国家精品在线课程学习平台",
+            "url": "https://next.xuetangx.com/",
+            "description": "国家精品在线课程学习平台"
+          },
+          {
+            "title": "网易公开课",
+            "url": "https://open.163.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Python123",
+            "url": "https://python123.io/student/home",
+            "description": "相关资源"
+          },
+          {
+            "title": "Chrome 网上应用店 - 扩展程序",
+            "url": "https://chrome.google.com/webstore/category/extensions?hl=zh-CN",
+            "description": "扩展程序"
+          },
+          {
+            "title": "Dataset Search",
+            "url": "https://datasetsearch.research.google.com/",
+            "description": "谷歌服务"
+          },
+          {
+            "title": "扇贝，知道你在改变",
+            "url": "https://web.shanbay.com/wordsweb/#/study/entry",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "spiders",
+        "icon": "fas fa-spider",
+        "links": [
+          {
+            "title": "安装 — Scrapyd 1.3.0 文档",
+            "url": "https://scrapyd.readthedocs.io/en/stable/install.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "Syllabus — Practical Machine Learning",
+            "url": "https://c.d2l.ai/stanford-cs329p/syllabus.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "爬虫工具库-spidertools.cn",
+            "url": "https://spidertools.cn/#/formatJSON",
+            "description": "spidertools.cn"
+          },
+          {
+            "title": "Apache Spark™ - Unified Engine for large-scale data analytics",
+            "url": "https://spark.apache.org/",
+            "description": "Unified Engine for large-scale data analytics"
+          },
+          {
+            "title": "第 1 章 引论 - 《编写高质量代码改善 Python 程序的 91 个建议》",
+            "url": "https://l1nwatch.gitbook.io/writing_solid_python_code_gitbook/di-1-zhang-yin-lun",
+            "description": "《编写高质量代码改善 Python 程序的 91 个建议》"
+          }
+        ]
+      },
+      {
+        "title": "linux",
+        "icon": "fab fa-linux",
+        "links": [
+          {
+            "title": "linux命令在线中文手册",
+            "url": "http://linux.51yip.com/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "English",
+        "icon": "fas fa-language",
+        "links": [
+          {
+            "title": "English Resources · engVid",
+            "url": "https://www.engvid.com/english-resources/",
+            "description": "engVid"
+          },
+          {
+            "title": "(53) DO & MAKE - How to talk about housework in English - YouTube",
+            "url": "https://www.youtube.com/watch?v=9wTgV1g8NJQ",
+            "description": "How to talk about housework in English - YouTube"
+          }
+        ]
+      },
+      {
+        "title": "codes",
+        "icon": "fas fa-code",
+        "links": [
+          {
+            "title": "书籍源码源码,书籍源码编程,书籍源码程序设计,书籍源码源代码,书籍源码代码实例,书籍源码项目源码,书籍源码商业源码 - 免费下载 - VerySource_领先的源码共享下载网站",
+            "url": "http://www.verysource.com/cate_source-in-ebook/",
+            "description": "免费下载 - VerySource_领先的源码共享下载网站"
+          },
+          {
+            "title": "LaTeX科技排版",
+            "url": "https://math.ecnu.edu.cn/~jypan/Latex/index.html",
+            "description": "教育机构"
+          }
+        ]
+      },
+      {
+        "title": "RS",
+        "icon": "fas fa-satellite",
+        "links": [
+          {
+            "title": "Google Earth Engine",
+            "url": "https://earthengine.google.com/",
+            "description": "谷歌服务"
+          },
+          {
+            "title": "Earth Engine JavaScript API简介| Google Earth Engine",
+            "url": "https://developers.google.com/earth-engine/tutorial_api_01",
+            "description": "Google Earth Engine"
+          },
+          {
+            "title": "Earth Engine代码编辑器| Google地球引擎| Google开发人员",
+            "url": "https://developers.google.com/earth-engine/playground",
+            "description": "Google地球引擎| Google开发人员"
+          },
+          {
+            "title": "EarthExplorer-主页",
+            "url": "https://earthexplorer.usgs.gov/",
+            "description": "主页"
+          },
+          {
+            "title": "Google Earth Engine Explorer",
+            "url": "https://explorer.earthengine.google.com/#workspace",
+            "description": "谷歌服务"
+          },
+          {
+            "title": "地球数据搜索",
+            "url": "https://search.earthdata.nasa.gov/search",
+            "description": "相关资源"
+          },
+          {
+            "title": "高等教育的Earth Engine资源| Google Earth Engine",
+            "url": "https://developers.google.com/earth-engine/edu",
+            "description": "Google Earth Engine"
+          },
+          {
+            "title": "珞珈一号",
+            "url": "http://59.175.109.173:8888/index.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "地理空间数据云",
+            "url": "http://www.gscloud.cn/",
+            "description": "相关资源"
+          },
+          {
+            "title": "DataV.GeoAtlas地理小工具系列",
+            "url": "http://datav.aliyun.com/portal/school/atlas/area_selector",
+            "description": "相关资源"
+          },
+          {
+            "title": "标准地图服务系统",
+            "url": "http://bzdt.ch.mnr.gov.cn/download.html?superclassName=%25E4%25B8%25AD%25E5%259B%25BD%25E5%2585%25A8%25E5%259B%25BE",
+            "description": "相关资源"
+          },
+          {
+            "title": "Google网页保存到书签 - Google 搜索",
+            "url": "https://www.google.com/search?q=Google%E7%BD%91%E9%A1%B5%E4%BF%9D%E5%AD%98%E5%88%B0%E4%B9%A6%E7%AD%BE&sxsrf=ALiCzsamqsOVKTI9iT-lgPQUWo0BKK8jxQ%3A1664895390459&ei=nkk8Y83TG4X_wAOk_JLgAg&ved=0ahUKEwjNmtjS6sb6AhWFP3AKHSS-BCwQ4dUDCA4&uact=5&oq=Google%E7%BD%91%E9%A1%B5%E4%BF%9D%E5%AD%98%E5%88%B0%E4%B9%A6%E7%AD%BE&gs_lp=Egdnd3Mtd2l6uAED-AEBMgcQABgeGKIEMgUQABiiBMICChAAGEcY1gQYsAOQBgpI2CJQkglY-BlwAXgByAEAkAEAmAHFBKABgxGqAQswLjIuMy4wLjEuMeIDBCBBGADiAwQgRhgAiAYB&sclient=gws-wiz",
+            "description": "Google 搜索"
+          },
+          {
+            "title": "Cloud-Based Remote Sensing with Google Earth Engine",
+            "url": "https://www.eefabook.org/",
+            "description": "Based Remote Sensing with Google Earth Engine"
+          },
+          {
+            "title": "遥感计算云服务",
+            "url": "https://engine.piesat.cn/engine/home",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "GEElearning",
+        "icon": "fas fa-earth-americas",
+        "links": [
+          {
+            "title": "(3 封私信 / 66 条消息) 无形的风 - 知乎",
+            "url": "https://www.zhihu.com/people/li-shi-wei-36/posts?page=6",
+            "description": "知乎"
+          },
+          {
+            "title": "遥感大数据平台 Google Earth Engine 教学视频_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili",
+            "url": "https://www.bilibili.com/video/av48083555",
+            "description": "゜)つロ 干杯~-bilibili"
+          },
+          {
+            "title": "零基础学习GEE - 知乎",
+            "url": "https://zhuanlan.zhihu.com/c_1137998284927893504",
+            "description": "知乎"
+          },
+          {
+            "title": "wuqiushenggithub",
+            "url": "https://github.com/giswqs/geemap",
+            "description": "开源代码仓库"
+          },
+          {
+            "title": "Google Earth Engine Developers - Google 网上论坛",
+            "url": "https://groups.google.com/g/google-earth-engine-developers",
+            "description": "Google 网上论坛"
+          },
+          {
+            "title": "Introduction to Google Earth Engine — Regional Agronomy",
+            "url": "https://reagro.org/blocks/where/gee/gee_intro.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "GEE遥感训练营数据+代码+论文总结",
+            "url": "https://mp.weixin.qq.com/s/jkkf4vUD0oqLjGEsY2ejuQ",
+            "description": "相关资源"
+          },
+          {
+            "title": "Earth Engine and Geemap — Geospatial Data Science with Earth Engine and Geemap",
+            "url": "https://book.geemap.org/index.html",
+            "description": "相关资源"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "数据",
+    "icon": "fas fa-folder",
+    "subcategories": [
+      {
+        "title": "默认分类",
+        "icon": "fas fa-folder-open",
+        "links": [
+          {
+            "title": "Top 50 matplotlib Visualizations - The Master Plots (w/ Full Python Code) | ML+",
+            "url": "https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/",
+            "description": "The Master Plots (w/ Full Python Code) | ML+"
+          }
+        ]
+      },
+      {
+        "title": "研究区边界",
+        "icon": "fas fa-map-marked-alt",
+        "links": [
+          {
+            "title": "省市县",
+            "url": "https://www.shengshixian.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "DataV.GeoAtlas地理小工具系列",
+            "url": "https://datav.aliyun.com/portal/school/atlas/area_selector",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "气象数据",
+        "icon": "fas fa-cloud-sun",
+        "links": [
+          {
+            "title": "🌤️ Free Open-Source Weather API | Open-Meteo.com",
+            "url": "https://open-meteo.com/",
+            "description": "Source Weather API | Open-Meteo.com"
+          },
+          {
+            "title": "NEX-GDDP-CMIP6 | Data Browse",
+            "url": "https://nex-gddp-cmip6.s3.us-west-2.amazonaws.com/index.html#NEX-GDDP-CMIP6/CESM2/ssp585/r4i1p1f1/tas/",
+            "description": "GDDP-CMIP6 | Data Browse"
+          },
+          {
+            "title": "世界239个国家的天气",
+            "url": "https://rp5.ru/%E4%B8%96%E7%95%8C%E5%A4%A9%E6%B0%94_",
+            "description": "相关资源"
+          },
+          {
+            "title": "Index of /data/pgf",
+            "url": "https://hydrology.soton.ac.uk/data/pgf/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "统计数据",
+        "icon": "fas fa-chart-bar",
+        "links": [
+          {
+            "title": "国家数据",
+            "url": "https://data.stats.gov.cn/",
+            "description": "相关资源"
+          },
+          {
+            "title": "FAO Map Catalog",
+            "url": "https://data.apps.fao.org/map/catalog/srv/eng/catalog.search#/metadata/59f7a5ef-2be4-43ee-9600-a6a9e9ff562a",
+            "description": "相关资源"
+          },
+          {
+            "title": "Startseite - STATISTIK AUSTRIA - Die Informationsmanager",
+            "url": "https://www.statistik.at/",
+            "description": "STATISTIK AUSTRIA - Die Informationsmanager"
+          },
+          {
+            "title": "GoPUP 概况",
+            "url": "https://doc.gopup.cn/#/README?id=gopup%e6%a6%82%e5%86%b5",
+            "description": "相关资源"
+          },
+          {
+            "title": "全国农技推广网",
+            "url": "https://www.natesc.org.cn/",
+            "description": "相关资源"
+          },
+          {
+            "title": "JPP-NET |日本植物保护协会",
+            "url": "https://web1.jppn.ne.jp/member/",
+            "description": "NET |日本植物保护协会"
+          },
+          {
+            "title": "FAOSTAT",
+            "url": "https://www.fao.org/faostat/en/#data/QCL",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "数据共享网站",
+        "icon": "fas fa-share-alt",
+        "links": [
+          {
+            "title": "首 页 - 地球资源数据云",
+            "url": "http://www.gis5g.com/home",
+            "description": "地球资源数据云"
+          },
+          {
+            "title": "国家青藏高原科学数据中心",
+            "url": "https://data.tpdc.ac.cn/home",
+            "description": "科研院所"
+          },
+          {
+            "title": "中国科学院资源环境科学与数据中心",
+            "url": "https://www.resdc.cn/data.aspx?DATAID=342",
+            "description": "相关资源"
+          },
+          {
+            "title": "资源服务系统",
+            "url": "http://rs.cern.ac.cn/data/initDRsearch",
+            "description": "科研院所"
+          },
+          {
+            "title": "中国科技资源共享网",
+            "url": "https://www.escience.org.cn/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "农业科学数据",
+        "icon": "fas fa-tractor",
+        "links": [
+          {
+            "title": "国家农业科学数据中心",
+            "url": "https://www.agridata.cn/data.html#/datadetail?id=286702",
+            "description": "相关资源"
+          },
+          {
+            "title": "GitHub - xml94/Plant_disease_recognition",
+            "url": "https://github.com/xml94/Plant_disease_recognition",
+            "description": "xml94/Plant_disease_recognition"
+          },
+          {
+            "title": "国家农业科学数据中心",
+            "url": "https://www.agridata.cn/#/home",
+            "description": "相关资源"
+          },
+          {
+            "title": "国家苹果大数据公共数据频道",
+            "url": "https://appledata-channel.agri.cn/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Pflanzenschutzmittel-Register",
+            "url": "https://psmregister.baes.gv.at/psmregister/faces/main?_adf.ctrl-state=sxhj8q9k0_4",
+            "description": "Register"
+          },
+          {
+            "title": "Obstbauwarndienst",
+            "url": "https://obstwarndienst.lko.at/1091/Steiermark",
+            "description": "相关资源"
+          },
+          {
+            "title": "陕西省果业中心",
+            "url": "http://www.guoye.sn.cn/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Open Data Journal for Agricultural Research (ODjAR) : Rothamsted Research",
+            "url": "https://repository.rothamsted.ac.uk/journal/8ww23/open-data-journal-for-agricultural-research-odjar",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "数据查找网站",
+        "icon": "fas fa-search",
+        "links": [
+          {
+            "title": "Dataset Search",
+            "url": "https://datasetsearch.research.google.com/search?query=coronavirus%20covid-19&docid=L2cvMTFqbl8wZmZsaw%3D%3D",
+            "description": "谷歌服务"
+          },
+          {
+            "title": "探险家的数据窝-数据是第一生产力",
+            "url": "https://www.dilitanxianjia.com/#",
+            "description": "数据是第一生产力"
+          },
+          {
+            "title": "Findata-科学数据搜索引擎",
+            "url": "http://findata.cn/",
+            "description": "科学数据搜索引擎"
+          }
+        ]
+      },
+      {
+        "title": "土地利用数据",
+        "icon": "fas fa-map",
+        "links": [
+          {
+            "title": "Land Use Harmonization",
+            "url": "https://luh.umd.edu/data.shtml",
+            "description": "相关资源"
+          },
+          {
+            "title": "CASEarth Data Sharing and Service Portal",
+            "url": "https://data.casearth.cn/en/sdo/detail/64d0950d08415d6cdb033018",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "土壤数据",
+        "icon": "fas fa-mountain",
+        "links": [
+          {
+            "title": "markdown/access_on_gee.md · master · ISRIC / SoilGrids / soilgrids.notebooks · GitLab",
+            "url": "https://git.wur.nl/isric/soilgrids/soilgrids.notebooks/-/blob/master/markdown/access_on_gee.md",
+            "description": "master · ISRIC / SoilGrids / soilgrids.notebooks · GitLab"
+          }
+        ]
+      },
+      {
+        "title": "生态数据",
+        "icon": "fas fa-tree",
+        "links": [
+          {
+            "title": "GBIF",
+            "url": "https://www.gbif.org/zh/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "病害数据",
+        "icon": "fas fa-bug",
+        "links": [
+          {
+            "title": "中果网_苹果价格行情,苹果供求信息,苹果期货交流,水果价格信息平台。",
+            "url": "http://www.pingguo7.cn/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Apfelschorf (Venturia inaequalis) - LfL",
+            "url": "https://www.lfl.bayern.de/ips/kleingarten/032395/index.php",
+            "description": "LfL"
+          },
+          {
+            "title": "苹果病虫害防控信息网",
+            "url": "http://www.apple-ipm.cn./",
+            "description": "相关资源"
+          },
+          {
+            "title": "Diseases - IRRI Rice Knowledge Bank",
+            "url": "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases",
+            "description": "IRRI Rice Knowledge Bank"
+          }
+        ]
+      },
+      {
+        "title": "机器学习数据",
+        "icon": "fas fa-robot",
+        "links": [
+          {
+            "title": "Kaggle: Your Machine Learning and Data Science Community",
+            "url": "https://www.kaggle.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "UCI Machine Learning Repository",
+            "url": "https://archive.ics.uci.edu/ml/index.php",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "物候数据",
+        "icon": "fas fa-calendar-alt",
+        "links": [
+          {
+            "title": "The PhenoCam Network",
+            "url": "https://phenocam.nau.edu/webcam/",
+            "description": "相关资源"
+          },
+          {
+            "title": "automeris.io: Computer vision assisted data extraction from charts using WebPlotDigitizer",
+            "url": "https://automeris.io/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Zoom Earth | 天气图，实时风暴跟踪器",
+            "url": "https://zoom.earth/",
+            "description": "天气图，实时风暴跟踪器"
+          }
+        ]
+      },
+      {
+        "title": "作物地图",
+        "icon": "fas fa-wheat-awn",
+        "links": [
+          {
+            "title": "Data Center | Home of the Spatial Production Allocation Model (MAPSPAM)",
+            "url": "https://mapspam.info/data/",
+            "description": "Home of the Spatial Production Allocation Model (MAPSPAM)"
+          }
+        ]
+      },
+      {
+        "title": "物种分布数据",
+        "icon": "fas fa-paw",
+        "links": [
+          {
+            "title": "GBIF",
+            "url": "https://www.gbif.org/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "作物品种数据库",
+        "icon": "fas fa-dna",
+        "links": [
+          {
+            "title": "品种审定查询",
+            "url": "http://202.127.42.47:6010/SDSite/Home/Index",
+            "description": "相关资源"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "模型",
+    "icon": "fas fa-folder",
+    "subcategories": [
+      {
+        "title": "默认分类",
+        "icon": "fas fa-folder-open",
+        "links": [
+          {
+            "title": "天气研究与预报模型 (WRF) | 中尺度和微尺度气象实验室",
+            "url": "https://www.mmm.ucar.edu/models/wrf",
+            "description": "中尺度和微尺度气象实验室"
+          },
+          {
+            "title": "SWAP.wur.nl",
+            "url": "https://swap.wur.nl/",
+            "description": "相关资源"
+          },
+          {
+            "title": "About - E3SM - Energy Exascale Earth System Model",
+            "url": "https://e3sm.org/about/",
+            "description": "E3SM - Energy Exascale Earth System Model"
+          },
+          {
+            "title": "用WRF模型进行气象模拟入门(1)——简介以及代码编译 - xg1990",
+            "url": "https://xg1990.com/blog/archives/190",
+            "description": "xg1990"
+          },
+          {
+            "title": "ORCHIDEE – Website of ORCHIDEE, Vegetation Model",
+            "url": "https://orchidee.ipsl.fr/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Home - agmiporg",
+            "url": "https://agmip.org/",
+            "description": "agmiporg"
+          },
+          {
+            "title": "《动手学深度学习》 — 动手学深度学习 2.0.0 documentation",
+            "url": "https://zh-v2.d2l.ai/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Segment Anything | Meta AI",
+            "url": "https://segment-anything.com/",
+            "description": "Meta AI"
+          },
+          {
+            "title": "Quantitative Plant | SPACSYS",
+            "url": "https://www.quantitative-plant.org/model/SPACSYS",
+            "description": "SPACSYS"
+          }
+        ]
+      },
+      {
+        "title": "作物模型",
+        "icon": "fas fa-wheat-awn",
+        "links": [
+          {
+            "title": "AgroStudio",
+            "url": "https://www.agro-studio.com/AboutUs",
+            "description": "相关资源"
+          },
+          {
+            "title": "World Food Studies Simulation Model (WOFOST) | Tierras y Aguas | Organización de las Naciones Unidas para la Alimentación y la Agricultura | Land & Water | Food and Agriculture Organization of the United Nations",
+            "url": "https://www.fao.org/land-water/land/land-governance/land-resources-planning-toolbox/category/details/es/c/1236431/",
+            "description": "Tierras y Aguas | Organización de las Naciones Unidas para la Alimentación y la Agricultura | Land & Water | Food and Agriculture Organization of the United Nations"
+          },
+          {
+            "title": "User Guide — Python Crop Simulation Environment 5.5 documentation",
+            "url": "https://pcse.readthedocs.io/en/stable/user_guide.html#background-of-pcse",
+            "description": "相关资源"
+          },
+          {
+            "title": "PCSE: The Python Crop Simulation Environment — Python Crop Simulation Environment 5.5 documentation",
+            "url": "https://pcse.readthedocs.io/en/stable/",
+            "description": "相关资源"
+          },
+          {
+            "title": "GitHub - ajwdewit/pcse_notebooks: 演示 PCSE 用法的 Jupyter 笔记本集合",
+            "url": "https://github.com/ajwdewit/pcse_notebooks",
+            "description": "ajwdewit/pcse_notebooks: 演示 PCSE 用法的 Jupyter 笔记本集合"
+          },
+          {
+            "title": "WOFOST_crop_parameters,在 YAML 中实现的 WOFOST 作物模拟模型的参数集,下载WOFOST_crop_parameters的源码_GitHub_帮酷",
+            "url": "https://github.com/ajwdewit/WOFOST_crop_parameters",
+            "description": "开源代码仓库"
+          },
+          {
+            "title": "(125条消息) The Python Crop Simulation Environment 系列学习笔记（一）_Will沐风的博客-CSDN博客",
+            "url": "https://blog.csdn.net/willpeng0258/article/details/119619831",
+            "description": "CSDN博客"
+          },
+          {
+            "title": "PCSE.WOFOST模型调参-CSDN博客",
+            "url": "https://blog.csdn.net/weixin_45452300/article/details/112101307",
+            "description": "CSDN博客"
+          },
+          {
+            "title": "APSIM",
+            "url": "https://www.apsim.info/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Crop Module Documentation – APSIM",
+            "url": "https://www.apsim.info/documentation/model-documentation/crop-module-documentation/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Calibrating with SCE-UA - SPOTPY Documentation",
+            "url": "https://spotpy.readthedocs.io/en/stable/Calibration_with_SCE-UA/",
+            "description": "UA - SPOTPY Documentation"
+          },
+          {
+            "title": "The PEST Suite | PEST",
+            "url": "https://pesthomepage.org/pest-suite",
+            "description": "PEST"
+          }
+        ]
+      },
+      {
+        "title": "deployed_models",
+        "icon": "fas fa-server",
+        "links": [
+          {
+            "title": "Agricultural Assistant",
+            "url": "http://118.89.50.72/detect/#/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Agricultural Assistant",
+            "url": "http://118.89.50.72/seg/#/",
+            "description": "相关资源"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "论坛网站",
+    "icon": "fas fa-folder",
+    "subcategories": [
+      {
+        "title": "默认分类",
+        "icon": "fas fa-folder-open",
+        "links": [
+          {
+            "title": "(1 封私信 / 2 条消息) 首页 - 知乎",
+            "url": "https://www.zhihu.com/",
+            "description": "知乎"
+          },
+          {
+            "title": "Desktop Goose by samperson",
+            "url": "https://samperson.itch.io/desktop-goose",
+            "description": "相关资源"
+          },
+          {
+            "title": "Home",
+            "url": "https://sites.google.com/site/xiaojiangligis/",
+            "description": "谷歌服务"
+          },
+          {
+            "title": "CSDN-专业IT技术社区",
+            "url": "https://www.csdn.net/",
+            "description": "专业IT技术社区"
+          },
+          {
+            "title": "网上论坛",
+            "url": "https://groups.google.com/my-groups",
+            "description": "谷歌服务"
+          }
+        ]
+      },
+      {
+        "title": "网站",
+        "icon": "fas fa-globe-americas",
+        "links": [
+          {
+            "title": "washingMachine/Objects at master · TuShen121/washingMachine · GitHub",
+            "url": "https://github.com/TuShen121/washingMachine",
+            "description": "TuShen121/washingMachine · GitHub"
+          },
+          {
+            "title": "AT89C51单片机实现全自动洗衣机功能的设计方案 - 控制/MCU - 电子发烧友网",
+            "url": "http://www.elecfans.com/emb/danpianji/20190702976012.html",
+            "description": "控制/MCU - 电子发烧友网"
+          },
+          {
+            "title": "51单片机的自动洗衣机 - 搜索结果 - 哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ 乾杯~ - bilibili",
+            "url": "https://search.bilibili.com/all?keyword=51%E5%8D%95%E7%89%87%E6%9C%BA%E7%9A%84%E8%87%AA%E5%8A%A8%E6%B4%97%E8%A1%A3%E6%9C%BA",
+            "description": "搜索结果 - 哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ 乾杯~ - bilibili"
+          },
+          {
+            "title": "关于51单片机的定时器T0、T1总结 - 51单片机 单片机论坛",
+            "url": "http://www.51hei.com/bbs/dpj-103111-1.html",
+            "description": "51单片机 单片机论坛"
+          },
+          {
+            "title": "C语言经典100例",
+            "url": "https://github.com/hubojing/C-100Practice",
+            "description": "开源代码仓库"
+          },
+          {
+            "title": "python安装第三方库遇到ERROR:Commanderroredoutwithexitstatus1:_weixin_44517500的博客-CSDN博客",
+            "url": "https://blog.csdn.net/weixin_44517500/article/details/99683286",
+            "description": "CSDN博客"
+          },
+          {
+            "title": "百度网盘提取码查询v8.8(最后一个版本) - 『精品软件区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn",
+            "url": "https://www.52pojie.cn/thread-1200254-1-1.html",
+            "description": "『精品软件区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn"
+          },
+          {
+            "title": "C语言如何实现输入密码以星号显示_百度知道",
+            "url": "https://zhidao.baidu.com/question/166454029.html",
+            "description": "百度服务"
+          },
+          {
+            "title": "VS2019初步使用 - 知乎",
+            "url": "https://zhuanlan.zhihu.com/p/129690795",
+            "description": "知乎"
+          },
+          {
+            "title": "Python《外星人入侵》源码_myl824011402的博客-CSDN博客_外星人入侵源码",
+            "url": "https://blog.csdn.net/myl824011402/article/details/106859955",
+            "description": "CSDN博客_外星人入侵源码"
+          },
+          {
+            "title": "刘晓燕长难句笔记",
+            "url": "https://www.zhihu.com/question/397409034/answer/1371302865",
+            "description": "知识分享平台"
+          },
+          {
+            "title": "Google收藏快捷键 - 国际版 Bing",
+            "url": "https://cn.bing.com/search?q=Google%E6%94%B6%E8%97%8F%E5%BF%AB%E6%8D%B7%E9%94%AE&qs=n&form=QBLHCN&sp=-1&pq=google%E6%94%B6%E8%97%8F&sc=0-8&sk=&cvid=81542ECC4D634EB897AF0B4701B293A7",
+            "description": "国际版 Bing"
+          },
+          {
+            "title": "自定义Endnote参考文献引用格式 - 简书",
+            "url": "https://www.jianshu.com/p/8ac56a8fe7ef",
+            "description": "简书"
+          },
+          {
+            "title": "第一个JavaScript程序",
+            "url": "http://c.biancheng.net/view/5355.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "2021考研初试各科目真题及答案解析汇总 - 考研真题 - 武汉文都",
+            "url": "https://wh.wendu.com/beikao/zhenti/98213.shtml",
+            "description": "考研真题 - 武汉文都"
+          },
+          {
+            "title": "生成线性间距向量 - MATLAB linspace - MathWorks 中国",
+            "url": "https://ww2.mathworks.cn/help/matlab/ref/linspace.html",
+            "description": "MATLAB linspace - MathWorks 中国"
+          },
+          {
+            "title": "(26条消息) 用C语言实现简单的学生数据库管理系统_Y一ming的博客-CSDN博客_c语言数据库管理系统",
+            "url": "https://blog.csdn.net/qq_41961881/article/details/106255053",
+            "description": "CSDN博客_c语言数据库管理系统"
+          },
+          {
+            "title": "传智教育黑马程序员社区_传智教育黑马程序员高端社区-北京校区论坛版块",
+            "url": "http://bbs.itheima.com/bj",
+            "description": "北京校区论坛版块"
+          },
+          {
+            "title": "CGTN - Homepage - Breaking News, China News, World News and Video",
+            "url": "https://www.cgtn.com/",
+            "description": "Homepage - Breaking News, China News, World News and Video"
+          },
+          {
+            "title": "pyplot cmap颜色 - 知乎",
+            "url": "https://zhuanlan.zhihu.com/p/114420786",
+            "description": "知乎"
+          },
+          {
+            "title": "从我的农民角度看：农业如何影响气候变化？- Agtecher：农业技术的博客",
+            "url": "https://agtecher.com/zh/from-my-farmer-pov-how-does-agriculture-affect-climate-change/",
+            "description": "Agtecher：农业技术的博客"
+          },
+          {
+            "title": "Home | clu-lab",
+            "url": "https://www.clu-lab.com/",
+            "description": "clu-lab"
+          },
+          {
+            "title": "aquacropos/aquacrop · Discussions · GitHub",
+            "url": "https://github.com/aquacropos/aquacrop/discussions",
+            "description": "Discussions · GitHub"
+          },
+          {
+            "title": "AgML",
+            "url": "https://www.agml.org/#about",
+            "description": "相关资源"
+          },
+          {
+            "title": "家庭供稿| 研究门",
+            "url": "https://www.researchgate.net/",
+            "description": "研究门"
+          },
+          {
+            "title": "github",
+            "url": "https://github.com/",
+            "description": "开源代码仓库"
+          },
+          {
+            "title": "小红书 - 你的生活指南",
+            "url": "https://www.xiaohongshu.com/explore",
+            "description": "你的生活指南"
+          }
+        ]
+      },
+      {
+        "title": "Email",
+        "icon": "fas fa-envelope",
+        "links": [
+          {
+            "title": "登录QQ邮箱",
+            "url": "https://mail.qq.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "163网易免费邮--中文邮箱第一品牌",
+            "url": "https://mail.163.com/#return",
+            "description": "-中文邮箱第一品牌"
+          },
+          {
+            "title": "腾讯企业邮箱",
+            "url": "https://exmail.qq.com/cgi-bin/frame_html?sid=nvB5lMoLBM8IIghX,2&sign_type=&r=8f9fa9ebe9761b3125fa6afac1783f41",
+            "description": "相关资源"
+          },
+          {
+            "title": "Gmail",
+            "url": "https://mail.google.com/mail/?tab=rm&authuser=0&ogbl",
+            "description": "谷歌服务"
+          },
+          {
+            "title": "西北农林科技大学邮件系统",
+            "url": "https://mail.nwafu.edu.cn/",
+            "description": "教育机构"
+          }
+        ]
+      },
+      {
+        "title": "Scholar webs",
+        "icon": "fas fa-user-graduate",
+        "links": [
+          {
+            "title": "程明明个人主页",
+            "url": "https://mmcheng.net/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Brett Bryan Profile | Deakin University",
+            "url": "https://experts.deakin.edu.au/40374-brett-bryan",
+            "description": "Deakin University"
+          },
+          {
+            "title": "Hao Lu's Homepage",
+            "url": "https://sites.google.com/site/poppinace/home",
+            "description": "谷歌服务"
+          },
+          {
+            "title": "肖浏骏-南京农业大学农学院",
+            "url": "https://nx.njau.edu.cn/info/1199/9806.htm",
+            "description": "南京农业大学农学院"
+          },
+          {
+            "title": "农业科学与工程学院党委、农业科学与工程学院、水土保持学院",
+            "url": "https://jszy.hhu.edu.cn/cwz/",
+            "description": "教育机构"
+          },
+          {
+            "title": "罗忠奎 - Soil Carbon Research-浙江大学个人主页",
+            "url": "https://person.zju.edu.cn/luozhongkui",
+            "description": "Soil Carbon Research-浙江大学个人主页"
+          },
+          {
+            "title": "科技部视频评审会议系统 - 首页",
+            "url": "https://expert.most.gov.cn/spps/#/userHome?userType=presenter&loginCount=5",
+            "description": "首页"
+          },
+          {
+            "title": "Chaoqun (Crystal) Lu | Department of Ecology, Evolution, and Organismal Biology (EEOB)",
+            "url": "https://www.eeob.iastate.edu/people/chaoqun-crystal-lu",
+            "description": "Department of Ecology, Evolution, and Organismal Biology (EEOB)"
+          },
+          {
+            "title": "‪Matthew C Fitzpatrick‬ - ‪Google Scholar‬",
+            "url": "https://scholar.google.com/citations?user=xF6Exq8AAAAJ&hl=en",
+            "description": "‪Google Scholar‬"
+          },
+          {
+            "title": "Smart Agriculture Team",
+            "url": "http://www.united-smartag.com/team/#/home",
+            "description": "相关资源"
+          },
+          {
+            "title": "‪Brett A Bryan‬ - ‪Google Scholar‬",
+            "url": "https://scholar.google.com/citations?user=r7hKP0aOxMoC&hl=en",
+            "description": "‪Google Scholar‬"
+          },
+          {
+            "title": "Jingye Han",
+            "url": "http://jingyehan.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "李林超-内蒙古农业大学农学院",
+            "url": "https://nxy.imau.edu.cn/info/1313/37638.htm",
+            "description": "内蒙古农业大学农学院"
+          },
+          {
+            "title": "GitHub Weekly",
+            "url": "https://iohub.inshub.cn/#/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Model Context Protocol (MCP)",
+            "url": "https://www.reddit.com/r/mcp/",
+            "description": "相关资源"
+          },
+          {
+            "title": "EPPO Global Database",
+            "url": "https://gd.eppo.int/#",
+            "description": "相关资源"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "工具技能",
+    "icon": "fas fa-folder",
+    "subcategories": [
+      {
+        "title": "AI-tools",
+        "icon": "fas fa-robot",
+        "links": [
+          {
+            "title": "txyz.ai - Integrate all paths to knowledge",
+            "url": "https://www.txyz.ai/?home",
+            "description": "Integrate all paths to knowledge"
+          },
+          {
+            "title": "agriGPT - the AI for agricultural applications",
+            "url": "https://agri-gpt.com/zh_tw/",
+            "description": "the AI for agricultural applications"
+          },
+          {
+            "title": "Kimi.ai - 帮你看更大的世界",
+            "url": "https://kimi.moonshot.cn/chat/cnqnlc1kqq4h7pv15a7g",
+            "description": "帮你看更大的世界"
+          },
+          {
+            "title": "Creative Birthday Ideas 10YO",
+            "url": "https://chat.openai.com/chat",
+            "description": "相关资源"
+          },
+          {
+            "title": "天工 — 双千亿级大语言模型",
+            "url": "https://chat.tiangong.cn/",
+            "description": "相关资源"
+          },
+          {
+            "title": "豆包 - 抖音旗下 AI 智能助手",
+            "url": "https://www.doubao.com/chat/?channel=baidu_pz&from_login=1",
+            "description": "抖音旗下 AI 智能助手"
+          },
+          {
+            "title": "All gammas - Gamma",
+            "url": "https://gamma.app/",
+            "description": "Gamma"
+          },
+          {
+            "title": "豆包 - 抖音旗下 AI 智能助手",
+            "url": "https://www.doubao.com/chat/?from_login=1",
+            "description": "抖音旗下 AI 智能助手"
+          },
+          {
+            "title": "写作蛙 智能AI创作助手 写作助手",
+            "url": "https://littlefrog.ai/home",
+            "description": "相关资源"
+          },
+          {
+            "title": "智谱清言",
+            "url": "https://chatglm.cn/main/alltoolsdetail",
+            "description": "相关资源"
+          },
+          {
+            "title": "通义",
+            "url": "https://tongyi.aliyun.com/qianwen",
+            "description": "相关资源"
+          },
+          {
+            "title": "661 Must-Try ChatGPT Prompts for December 2024",
+            "url": "https://promptadvance.club/chatgpt-prompts#academic-writing",
+            "description": "Try ChatGPT Prompts for December 2024"
+          },
+          {
+            "title": "DeepSeek - 探索未至之境",
+            "url": "https://chat.deepseek.com/",
+            "description": "探索未至之境"
+          },
+          {
+            "title": "ChatGPT Plus · 一键秒充 ChatGPT",
+            "url": "https://gptchongzhi.org/",
+            "description": "一键秒充 ChatGPT"
+          },
+          {
+            "title": "OpenRouter",
+            "url": "https://openrouter.ai/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Playground | Glama",
+            "url": "https://glama.ai/playground/3lrnn24jt7?chat=7wc9tx5bom",
+            "description": "Glama"
+          },
+          {
+            "title": "ChatGPT Plus 充值服务 | 专业AI充值平台",
+            "url": "https://ai.chatgptzh.com.cn/price",
+            "description": "专业AI充值平台"
+          },
+          {
+            "title": "Stitch - Design with AI",
+            "url": "https://stitch.withgoogle.com/",
+            "description": "Design with AI"
+          },
+          {
+            "title": "发现顶尖 MCP 服务器 | MCP 市场",
+            "url": "https://mcpmarket.com/zh",
+            "description": "MCP 市场"
+          },
+          {
+            "title": "LMArena",
+            "url": "https://lmarena.ai/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "空间分析",
+        "icon": "fas fa-map-marked",
+        "links": [
+          {
+            "title": "Spatial sampling with R",
+            "url": "https://dickbrus.github.io/SpatialSamplingwithR/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "科研绘图",
+        "icon": "fas fa-chart-pie",
+        "links": [
+          {
+            "title": "Top 50 matplotlib Visualizations - The Master Plots (w/ Full Python Code) | ML+",
+            "url": "https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/#",
+            "description": "The Master Plots (w/ Full Python Code) | ML+"
+          },
+          {
+            "title": "ColorBrewer: Color Advice for Maps",
+            "url": "https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3",
+            "description": "相关资源"
+          },
+          {
+            "title": "ColorSpace - Color Palettes Generator and Color Gradient Tool",
+            "url": "https://mycolor.space/",
+            "description": "Color Palettes Generator and Color Gradient Tool"
+          }
+        ]
+      },
+      {
+        "title": "图形摘要",
+        "icon": "fas fa-chart-area",
+        "links": [
+          {
+            "title": "颜色代码表-在线色卡名称对照表与16进制RGB颜色表转换工具",
+            "url": "https://www.ysdaima.com/tools/",
+            "description": "在线色卡名称对照表与16进制RGB颜色表转换工具"
+          }
+        ]
+      },
+      {
+        "title": "graphviz",
+        "icon": "fas fa-project-diagram",
+        "links": [
+          {
+            "title": "Graphviz Online",
+            "url": "https://dreampuf.github.io/GraphvizOnline/?engine=dot#digraph%20G%20%7B%0A%0A%20%20subgraph%20cluster_0%20%7B%0A%20%20%20%20style%3Dfilled%3B%0A%20%20%20%20color%3Dlightgrey%3B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%2Ccolor%3Dwhite%5D%3B%0A%20%20%20%20a0%20-%3E%20a1%20-%3E%20a2%20-%3E%20a3%3B%0A%20%20%20%20label%20%3D%20%22process%20%231%22%3B%0A%20%20%7D%0A%0A%20%20subgraph%20cluster_1%20%7B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%5D%3B%0A%20%20%20%20b0%20-%3E%20b1%20-%3E%20b2%20-%3E%20b3%3B%0A%20%20%20%20label%20%3D%20%22process%20%232%22%3B%0A%20%20%20%20color%3Dblue%0A%20%20%7D%0A%20%20start%20-%3E%20a0%3B%0A%20%20start%20-%3E%20b0%3B%0A%20%20a1%20-%3E%20b3%3B%0A%20%20b2%20-%3E%20a3%3B%0A%20%20a3%20-%3E%20a0%3B%0A%20%20a3%20-%3E%20end%3B%0A%20%20b3%20-%3E%20end%3B%0A%0A%20%20start%20%5Bshape%3DMdiamond%5D%3B%0A%20%20end%20%5Bshape%3DMsquare%5D%3B%0A%7D",
+            "description": "相关资源"
+          },
+          {
+            "title": "Editing cotton_test - Snip Web",
+            "url": "https://snip.mathpix.com/2022050855/notes/9de6477f-03ea-4075-a1df-07f8bce9f0c7/edit",
+            "description": "Snip Web"
+          }
+        ]
+      },
+      {
+        "title": "论文写作",
+        "icon": "fas fa-pen-fancy",
+        "links": [
+          {
+            "title": "Slager | LaTeX在线编辑器 | 人人都是论文高手",
+            "url": "https://www.slager.link/#/home",
+            "description": "LaTeX在线编辑器 | 人人都是论文高手"
+          }
+        ]
+      },
+      {
+        "title": "机器学习",
+        "icon": "fas fa-brain",
+        "links": []
+      },
+      {
+        "title": "Pytorch_forecasting",
+        "icon": "fab fa-python",
+        "links": [
+          {
+            "title": "Demand forecasting with the Temporal Fusion Transformer — pytorch-forecasting documentation",
+            "url": "https://pytorch-forecasting.readthedocs.io/en/latest/tutorials/stallion.html",
+            "description": "forecasting documentation"
+          },
+          {
+            "title": "The latest in Machine Learning | Papers With Code",
+            "url": "https://paperswithcode.com/",
+            "description": "Papers With Code"
+          },
+          {
+            "title": "20天吃透Pytorch",
+            "url": "https://www.pytorchmaster.com/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "neural network",
+        "icon": "fas fa-network-wired",
+        "links": [
+          {
+            "title": "Neural Networks from Scratch - an interactive guide",
+            "url": "https://aegeorge42.github.io/",
+            "description": "an interactive guide"
+          }
+        ]
+      },
+      {
+        "title": "统计分析",
+        "icon": "fas fa-calculator",
+        "links": []
+      },
+      {
+        "title": "遥感&GEE",
+        "icon": "fas fa-satellite",
+        "links": [
+          {
+            "title": "时空三极环境大数据方法库-时空三极环境大数据平台",
+            "url": "https://poles.tpdc.ac.cn/zh-hans/data/analyze/list",
+            "description": "时空三极环境大数据平台"
+          }
+        ]
+      },
+      {
+        "title": "科研小工具",
+        "icon": "fas fa-tools",
+        "links": [
+          {
+            "title": "Home - Snip Web",
+            "url": "https://snip.mathpix.com/home",
+            "description": "Snip Web"
+          }
+        ]
+      },
+      {
+        "title": "论文投稿",
+        "icon": "fas fa-paper-plane",
+        "links": [
+          {
+            "title": "最新SCI期刊查询及投稿分析系统（2021-2022年） - LetPub",
+            "url": "https://www.letpub.com.cn/index.php?page=journalapp",
+            "description": "2022年） - LetPub"
+          },
+          {
+            "title": "Find journals | Elsevier® JournalFinder",
+            "url": "https://journalfinder.elsevier.com/",
+            "description": "Elsevier® JournalFinder"
+          },
+          {
+            "title": "Wiley | Find a journal match for your manuscript",
+            "url": "https://journalfinder.wiley.com/search?type=match",
+            "description": "Find a journal match for your manuscript"
+          },
+          {
+            "title": "Researcher.Life Journal Finder: Journal Suggester For Your Manuscript",
+            "url": "https://researcher.life/journal?activeTab=abstract-search",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "项目书",
+        "icon": "fas fa-file-contract",
+        "links": [
+          {
+            "title": "国家自然科学基金大数据知识管理服务门户",
+            "url": "https://kd.nsfc.gov.cn/",
+            "description": "相关资源"
+          },
+          {
+            "title": "一个纯粹的机器学习 & AI 导航网站",
+            "url": "https://ai.zhanglearning.com/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "简历制作",
+        "icon": "fas fa-id-card",
+        "links": [
+          {
+            "title": "91化简-一款免费开源的简历制作神器",
+            "url": "https://91huajian.cn/template",
+            "description": "一款免费开源的简历制作神器"
+          },
+          {
+            "title": "模板中心 - CodeCV简历",
+            "url": "https://codecv.top/templates",
+            "description": "CodeCV简历"
+          }
+        ]
+      },
+      {
+        "title": "papers",
+        "icon": "fas fa-file-alt",
+        "links": [
+          {
+            "title": "papers",
+            "url": "http://papers.agrivy.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "文献互助平台 - 科研通(AbleSci.com)",
+            "url": "https://www.ablesci.com/",
+            "description": "科研通(AbleSci.com)"
+          },
+          {
+            "title": "百度学术 - 保持学习的态度",
+            "url": "https://xueshu.baidu.com/",
+            "description": "保持学习的态度"
+          },
+          {
+            "title": "西北农林科技大学论文管理系统",
+            "url": "http://172.27.4.2/index.action",
+            "description": "相关资源"
+          },
+          {
+            "title": "学术搜索：站在巨人的肩上",
+            "url": "https://sc.panda321.com/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Google Scholar",
+            "url": "https://scholar.google.co.uk/schhp?hl=en&as_sdt=0,33",
+            "description": "相关资源"
+          },
+          {
+            "title": "ResearchRabbit",
+            "url": "https://www.researchrabbit.ai/",
+            "description": "相关资源"
+          },
+          {
+            "title": "Literature Review | Paper Digest",
+            "url": "https://www.paperdigest.org/review/",
+            "description": "Paper Digest"
+          },
+          {
+            "title": "Zotero 插件商店 | Zotero 中文社区",
+            "url": "https://zotero-chinese.com/plugins/#zotero=zotero7&tags=attachment",
+            "description": "Zotero 中文社区"
+          },
+          {
+            "title": "Overview of research on rice phenology - Open Knowledge Maps",
+            "url": "https://openknowledgemaps.org/map/60b8159a01adb3c34a63658978e287f2",
+            "description": "Open Knowledge Maps"
+          }
+        ]
+      },
+      {
+        "title": "journals",
+        "icon": "fas fa-journal-whills",
+        "links": [
+          {
+            "title": "BG - Recent",
+            "url": "https://bg.copernicus.org/recent_papers.html",
+            "description": "Recent"
+          },
+          {
+            "title": "Aims and scope | Journal of Plant Diseases and Protection",
+            "url": "https://link.springer.com/journal/41348/aims-and-scope",
+            "description": "Journal of Plant Diseases and Protection"
+          }
+        ]
+      },
+      {
+        "title": "无人机数据处理",
+        "icon": "fas fa-helicopter",
+        "links": [
+          {
+            "title": "Welcome to OpenDroneMap’s documentation — OpenDroneMap 3.5.4 documentation",
+            "url": "https://docs.opendronemap.org/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "AI-agents",
+        "icon": "fas fa-user-robot",
+        "links": [
+          {
+            "title": "AI agents - GeoAI",
+            "url": "https://opengeoai.org/examples/AI_agents/",
+            "description": "GeoAI"
+          },
+          {
+            "title": "Workflows - n8n",
+            "url": "http://120.46.81.3:5678/projects/p3pSUo9SKnUA4CrL/workflows",
+            "description": "n8n"
+          }
+        ]
+      },
+      {
+        "title": "ppt制作",
+        "icon": "fas fa-presentation",
+        "links": [
+          {
+            "title": "PPT模板_PPT模版免费下载_免费PPT模板下载 -【第一PPT】",
+            "url": "https://www.1ppt.com/",
+            "description": "【第一PPT】"
+          },
+          {
+            "title": "Freepik com Photos - Download Free High-Quality Pictures | Freepik",
+            "url": "https://www.freepik.com/photos/freepik-com",
+            "description": "Download Free High-Quality Pictures | Freepik"
+          },
+          {
+            "title": "Free Icons PNG, ICO, ICNS and SVG",
+            "url": "https://icon-icons.com/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "app开发",
+        "icon": "fas fa-mobile-alt",
+        "links": [
+          {
+            "title": "Figma: The Collaborative Interface Design Tool",
+            "url": "https://www.figma.com/",
+            "description": "相关资源"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "workshop",
+    "icon": "fas fa-folder",
+    "subcategories": [
+      {
+        "title": "默认分类",
+        "icon": "fas fa-folder-open",
+        "links": [
+          {
+            "title": "云效",
+            "url": "https://devops.aliyun.com/projex/project?_userId=6548ac14f717cdf76fce6567&timestamp=1731596147863&mode=redirect&sign=4ff0d8ad2c4902a4b64059ae8d11bab6#viewIdentifier=4e225857724c64c16037fe76",
+            "description": "相关资源"
+          },
+          {
+            "title": "CSDN - 专业开发者社区",
+            "url": "https://www.csdn.net/?spm=1001.2014.3001.4476",
+            "description": "专业开发者社区"
+          },
+          {
+            "title": "公众号",
+            "url": "https://mp.weixin.qq.com/cgi-bin/home?t=home/index&lang=zh_CN&token=270244731",
+            "description": "相关资源"
+          },
+          {
+            "title": "Projects · GitLab",
+            "url": "http://120.46.81.3:8090/",
+            "description": "GitLab"
+          },
+          {
+            "title": "田块总览 - Farmlynk智慧农业平台",
+            "url": "http://120.46.81.3:2080/field/overview",
+            "description": "Farmlynk智慧农业平台"
+          },
+          {
+            "title": "水稻试验列表",
+            "url": "http://81.71.4.63/syt/viewdata/user_trials/19560715326/",
+            "description": "相关资源"
+          }
+        ]
+      },
+      {
+        "title": "sdm项目",
+        "icon": "fas fa-project-diagram",
+        "links": [
+          {
+            "title": "(96条消息) 【R语言实例】物种分布模型介绍_Goodsta的博客-CSDN博客_物种分布模型sdm",
+            "url": "https://blog.csdn.net/wong2016/article/details/125109647",
+            "description": "CSDN博客_物种分布模型sdm"
+          },
+          {
+            "title": "SSDM: Stacked Species Distribution Models with R",
+            "url": "https://cran.r-project.org/web/packages/SSDM/vignettes/SSDM.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "search.r-project.org: sdm",
+            "url": "https://search.r-project.org/?P=sdm&SORT=&HITSPERPAGE=20&DB=r-manuals&DB=r-help&DB=cran-views&DB=cran-info&DB=cran-help&DB=cran-news&DB=cran-readme&DB=cran-vignettes&DEFAULTOP=and&FMT=query&xP=ZBregress%09ZFregress%09ZSregress%09Zregress&xDB=cran-help%2Fcran-info%2Fcran-news%2Fr-help%2Fr-manuals%2Fcran-readme%2Fcran-views%2Fcran-vignettes&xFILTERS=.%7E%7E4294967295",
+            "description": "project.org: sdm"
+          },
+          {
+            "title": "矢量数据操作 - R 空间",
+            "url": "https://rspatial.org/raster/spatial/7-vectmanip.html",
+            "description": "R 空间"
+          },
+          {
+            "title": "简介 — R 空间",
+            "url": "https://rspatial.org/raster/sdm/1_sdm_introduction.html",
+            "description": "相关资源"
+          },
+          {
+            "title": "物种分布建模 - R Spatial",
+            "url": "https://rspatial.org/raster/sdm/",
+            "description": "R Spatial"
+          },
+          {
+            "title": "R 教程 | 生态预报",
+            "url": "https://course.naturecast.org/docs/r-species-distribution-models/r_tutorial/",
+            "description": "生态预报"
+          },
+          {
+            "title": "R 语言实战与应用",
+            "url": "https://www.manning.com/books/r-in-action",
+            "description": "相关资源"
+          },
+          {
+            "title": "首页 · 魔搭社区",
+            "url": "https://www.modelscope.cn/home",
+            "description": "魔搭社区"
+          },
+          {
+            "title": "Your Projects - Overleaf, Online LaTeX Editor",
+            "url": "https://www.overleaf.com/project",
+            "description": "Overleaf, Online LaTeX Editor"
+          },
+          {
+            "title": "WebPlotDigitizer - Extract data from plots, images, and maps",
+            "url": "https://automeris.io/WebPlotDigitizer/",
+            "description": "Extract data from plots, images, and maps"
+          },
+          {
+            "title": "Climatic Change | Aims and scope",
+            "url": "https://www.springer.com/journal/10584/aims-and-scope",
+            "description": "Aims and scope"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "NWAFU",
+    "icon": "fas fa-folder",
+    "subcategories": [
+      {
+        "title": "默认分类",
+        "icon": "fas fa-folder-open",
+        "links": [
+          {
+            "title": "西北农林科技大学研究生院（党委研究生工作部）",
+            "url": "https://yjshy.nwsuaf.edu.cn/tzgg/zs/index.htm",
+            "description": "教育机构"
+          },
+          {
+            "title": "西北农林科技大学",
+            "url": "https://www.nwafu.edu.cn/",
+            "description": "教育机构"
+          },
+          {
+            "title": "nwafuVPN",
+            "url": "https://vpn.nwafu.edu.cn/por/service.csp",
+            "description": "教育机构"
+          },
+          {
+            "title": "网站认证",
+            "url": "https://portal.nwafu.edu.cn/",
+            "description": "教育机构"
+          },
+          {
+            "title": "网络管理",
+            "url": "https://service.nwafu.edu.cn/",
+            "description": "教育机构"
+          },
+          {
+            "title": "研究生管理平台",
+            "url": "https://newehall.nwafu.edu.cn/ywtb-portal/Lite/index.html?browser=no#/service",
+            "description": "教育机构"
+          },
+          {
+            "title": "西北农林科技大学IPTV",
+            "url": "https://iptv.nwafu.edu.cn/v1/list/channel/%E7%83%AD%E9%97%A8%E9%A2%91%E9%81%93",
+            "description": "教育机构"
+          },
+          {
+            "title": "智教云门户",
+            "url": "https://zhjx.nwafu.edu.cn/ICloudPortal/",
+            "description": "教育机构"
+          },
+          {
+            "title": "水土保持研究所",
+            "url": "http://www.iswc.ac.cn/",
+            "description": "科研院所"
+          },
+          {
+            "title": "西北农林科技大学资源环境学院",
+            "url": "https://zhxy.nwafu.edu.cn/index.htm",
+            "description": "教育机构"
+          },
+          {
+            "title": "西北农林科技大学研究生招生信息网",
+            "url": "https://yz.nwsuaf.edu.cn/zsxx/ssszs/8a44c3ffa4744a71bafa0d3afea8bd61.htm",
+            "description": "教育机构"
+          },
+          {
+            "title": "信息工程学院作业管理系统",
+            "url": "http://202.117.179.110/",
+            "description": "相关资源"
+          },
+          {
+            "title": "西北农林科技大学信息化管理处（网络与教育技术中心）",
+            "url": "https://nic.nwafu.edu.cn/",
+            "description": "教育机构"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "其他",
+    "icon": "fas fa-folder",
+    "subcategories": [
+      {
+        "title": "默认分类",
+        "icon": "fas fa-folder-open",
+        "links": [
+          {
+            "title": "Latest science news, discoveries and analysis",
+            "url": "https://www.nature.com/news",
+            "description": "顶级学术期刊"
+          },
+          {
+            "title": "YouTube",
+            "url": "https://www.youtube.com/",
+            "description": "视频内容"
+          },
+          {
+            "title": "Zeli - 用中文阅读Hacker News和AI论文",
+            "url": "https://zeli.app/zh",
+            "description": "用中文阅读Hacker News和AI论文"
+          }
+        ]
+      }
+    ]
+  }
+]

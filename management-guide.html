@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理功能使用指南 - AgricultureModeling</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2d5a4f;
+            margin-top: 2rem;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #4a8b3a;
+            padding-bottom: 1rem;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 4px solid #4a8b3a;
+        }
+        .step-list {
+            background: #e9f7ef;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid #28a745;
+            margin: 1rem 0;
+        }
+        .button-demo {
+            display: inline-block;
+            background: #2d5a4f;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0.5rem;
+        }
+        .icon {
+            color: #4a8b3a;
+            margin-right: 0.5rem;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .keyboard-shortcut {
+            background: #6c757d;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌾 AgricultureModeling 管理功能使用指南</h1>
+
+        <div class="success">
+            <strong>✨ 新功能上线！</strong> 现在您可以完全自定义和管理您的导航书签了。支持添加、编辑、删除分类和书签，还可以导入导出数据。
+        </div>
+
+        <h2>🚀 功能概览</h2>
+
+        <div class="feature-card">
+            <h3><span class="icon">🎛️</span>管理模式</h3>
+            <p>点击顶部工具栏的 <span class="button-demo">⚙️ 管理</span> 按钮进入管理模式。在管理模式下，您可以：</p>
+            <ul>
+                <li>添加新的主分类和子分类</li>
+                <li>添加新的书签链接</li>
+                <li>编辑和删除现有内容</li>
+                <li>导入和导出书签数据</li>
+            </ul>
+        </div>
+
+        <h2>📖 详细使用教程</h2>
+
+        <div class="feature-card">
+            <h3><span class="icon">➕</span>添加主分类</h3>
+            <div class="step-list">
+                <ol>
+                    <li>进入管理模式 (点击 ⚙️ 按钮)</li>
+                    <li>在左侧面板点击 <span class="button-demo">➕ 添加分类</span></li>
+                    <li>填写分类名称</li>
+                    <li>选择合适的图标</li>
+                    <li>点击确定完成创建</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <h3><span class="icon">📁</span>添加子分类</h3>
+            <div class="step-list">
+                <ol>
+                    <li>进入管理模式</li>
+                    <li>右键点击目标主分类</li>
+                    <li>选择"添加子分类"</li>
+                    <li>填写子分类信息和选择图标</li>
+                    <li>确认添加</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <h3><span class="icon">🔗</span>添加书签</h3>
+            <div class="step-list">
+                <ol>
+                    <li>进入管理模式</li>
+                    <li>选择目标分类（左侧导航中点击）</li>
+                    <li>点击右侧内容区的 <span class="button-demo">➕ 添加书签</span></li>
+                    <li>填写书签信息：
+                        <ul>
+                            <li><strong>标题</strong>：书签显示名称</li>
+                            <li><strong>网址</strong>：完整的URL地址</li>
+                            <li><strong>描述</strong>：可选，书签的简短说明</li>
+                        </ul>
+                    </li>
+                    <li>点击确定保存</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <h3><span class="icon">✏️</span>编辑和删除</h3>
+            <div class="step-list">
+                <p><strong>方式1：右键菜单</strong></p>
+                <ol>
+                    <li>进入管理模式</li>
+                    <li>右键点击要操作的项目</li>
+                    <li>选择"编辑"或"删除"</li>
+                </ol>
+                <p><strong>方式2：管理按钮</strong></p>
+                <ol>
+                    <li>进入管理模式</li>
+                    <li>鼠标悬停在项目上显示 <code>⋮</code> 按钮</li>
+                    <li>点击按钮选择操作</li>
+                </ol>
+            </div>
+        </div>
+
+        <h2>💾 数据管理</h2>
+
+        <div class="feature-card">
+            <h3><span class="icon">📤</span>导出数据</h3>
+            <div class="step-list">
+                <ol>
+                    <li>进入管理模式</li>
+                    <li>点击左侧面板的 <span class="button-demo">⬇️ 导出</span> 按钮</li>
+                    <li>自动下载JSON格式的数据文件</li>
+                    <li>文件名格式：<code>agriculture-bookmarks-YYYY-MM-DD.json</code></li>
+                </ol>
+            </div>
+            <div class="success">
+                <strong>💡 建议：</strong> 定期导出数据作为备份，特别是在大量修改之前。
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <h3><span class="icon">📥</span>导入数据</h3>
+            <div class="step-list">
+                <ol>
+                    <li>进入管理模式</li>
+                    <li>点击左侧面板的 <span class="button-demo">⬆️ 导入</span> 按钮</li>
+                    <li>选择JSON格式的书签文件</li>
+                    <li>选择导入方式：
+                        <ul>
+                            <li><strong>合并数据</strong>：保留现有数据，添加新数据</li>
+                            <li><strong>覆盖数据</strong>：替换所有现有数据</li>
+                        </ul>
+                    </li>
+                    <li>点击确定执行导入</li>
+                </ol>
+            </div>
+            <div class="warning">
+                <strong>⚠️ 注意：</strong> 导入前建议先导出当前数据作为备份，避免数据丢失。
+            </div>
+        </div>
+
+        <h2>💾 数据存储说明</h2>
+
+        <div class="feature-card">
+            <h3><span class="icon">🗃️</span>本地存储</h3>
+            <p>所有的修改都会自动保存到浏览器的本地存储（localStorage）中：</p>
+            <ul>
+                <li>✅ 数据在同一浏览器中持久保存</li>
+                <li>✅ 不依赖网络连接</li>
+                <li>✅ 隐私安全，数据不会上传到服务器</li>
+                <li>⚠️ 清除浏览器数据会丢失修改的内容</li>
+                <li>⚠️ 不同浏览器之间数据不共享</li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h3><span class="icon">🔄</span>数据优先级</h3>
+            <p>系统按以下优先级加载数据：</p>
+            <ol>
+                <li><strong>本地存储数据</strong> - 您的修改和添加</li>
+                <li><strong>原始JSON文件</strong> - 初始的444个书签</li>
+                <li><strong>默认数据</strong> - 基础示例数据</li>
+            </ol>
+        </div>
+
+        <h2>⌨️ 快捷操作</h2>
+
+        <div class="feature-card">
+            <h3><span class="icon">⚡</span>键盘快捷键</h3>
+            <ul>
+                <li><span class="keyboard-shortcut">ESC</span> - 关闭模态对话框</li>
+                <li><span class="keyboard-shortcut">Enter</span> - 在表单中确认输入</li>
+                <li>右键点击 - 快速访问编辑/删除菜单</li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h3><span class="icon">🎯</span>使用技巧</h3>
+            <ul>
+                <li>图标选择：提供80+个精选图标，支持农业、科研、技术等主题</li>
+                <li>分类管理：建议按用途或主题组织分类，便于查找</li>
+                <li>描述信息：为书签添加描述，支持搜索匹配</li>
+                <li>定期备份：重要修改前建议导出数据备份</li>
+            </ul>
+        </div>
+
+        <h2>🔧 故障排除</h2>
+
+        <div class="feature-card">
+            <h3><span class="icon">❗</span>常见问题</h3>
+            <p><strong>Q: 数据修改后刷新页面丢失了？</strong></p>
+            <p>A: 检查浏览器是否允许localStorage，确保没有使用无痕模式。</p>
+
+            <p><strong>Q: 导入失败提示格式错误？</strong></p>
+            <p>A: 确保JSON文件格式正确，建议使用系统导出的文件作为参考。</p>
+
+            <p><strong>Q: 管理按钮没有显示？</strong></p>
+            <p>A: 确保已经点击顶部的⚙️按钮进入管理模式。</p>
+
+            <p><strong>Q: 想要恢复原始数据？</strong></p>
+            <p>A: 清除浏览器localStorage，或导入原始的bookmarks.json文件。</p>
+        </div>
+
+        <h2>🚀 开始使用</h2>
+
+        <div class="success">
+            <p><strong>准备就绪！</strong> 现在您可以：</p>
+            <ol>
+                <li><a href="./index.html" target="_blank">🌐 打开主网站</a></li>
+                <li>点击⚙️按钮进入管理模式</li>
+                <li>开始自定义您的专属导航网站</li>
+            </ol>
+        </div>
+
+        <div class="warning">
+            <strong>💡 小提示：</strong> 管理功能基于现代浏览器技术，建议使用 Chrome 80+、Firefox 75+、Safari 13+ 或 Edge 80+ 以获得最佳体验。
+        </div>
+
+        <hr style="margin: 2rem 0; border: none; border-top: 1px solid #dee2e6;">
+
+        <p style="text-align: center; color: #6c757d;">
+            📖 更多功能和更新请关注项目文档 |
+            <a href="./README.md" target="_blank">📝 查看README</a> |
+            <a href="./CHANGELOG.md" target="_blank">📋 查看更新日志</a>
+        </p>
+    </div>
+</body>
+</html>

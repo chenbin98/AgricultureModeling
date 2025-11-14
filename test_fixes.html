@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>功能修复测试 - AgricultureModeling</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
+        .test-result { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        .warning { background: #fff3cd; color: #856404; }
+        button { padding: 8px 16px; margin: 5px; border: none; border-radius: 4px; cursor: pointer; }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-success { background: #28a745; color: white; }
+        iframe { width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>🔧 AgricultureModeling 功能修复测试</h1>
+
+    <div class="test-section">
+        <h2>📝 修复清单</h2>
+        <div class="test-result success">✅ 1. 修复页面显示 'loading=lazy' 文字问题</div>
+        <div class="test-result success">✅ 2. 修复左侧导航展开/收起功能</div>
+        <div class="test-result success">✅ 3. 检查并补全 bookmarks.json 数据</div>
+        <div class="test-result success">✅ 4. 优化右侧内容显示逻辑</div>
+    </div>
+
+    <div class="test-section">
+        <h2>🧪 功能测试</h2>
+        <div id="testResults">
+            <div class="test-result info">点击下方按钮开始测试...</div>
+        </div>
+        <button class="btn-primary" onclick="runDataTest()">测试数据完整性</button>
+        <button class="btn-primary" onclick="runStructureTest()">测试导航结构</button>
+        <button class="btn-success" onclick="openMainSite()">🚀 打开主网站</button>
+    </div>
+
+    <div class="test-section">
+        <h2>📊 数据统计</h2>
+        <div id="dataStats">
+            <div class="test-result info">加载数据统计中...</div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🖥️ 网站预览</h2>
+        <iframe src="./index.html" title="AgricultureModeling 网站预览"></iframe>
+    </div>
+
+    <script>
+        let bookmarksData = null;
+
+        // 页面加载时自动获取数据统计
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDataStats();
+        });
+
+        async function loadDataStats() {
+            try {
+                const response = await fetch('./data/bookmarks.json');
+                bookmarksData = await response.json();
+
+                if (bookmarksData) {
+                    displayDataStats();
+                }
+            } catch (error) {
+                document.getElementById('dataStats').innerHTML =
+                    `<div class="test-result error">数据加载失败: ${error.message}</div>`;
+            }
+        }
+
+        function displayDataStats() {
+            let totalCategories = bookmarksData.length;
+            let totalSubcategories = 0;
+            let totalLinks = 0;
+            let emptyCategories = [];
+
+            bookmarksData.forEach((category, index) => {
+                if (category.subcategories) {
+                    totalSubcategories += category.subcategories.length;
+
+                    category.subcategories.forEach(subcategory => {
+                        if (subcategory.links) {
+                            totalLinks += subcategory.links.length;
+                        }
+
+                        if (!subcategory.links || subcategory.links.length === 0) {
+                            emptyCategories.push(`${category.title} > ${subcategory.title}`);
+                        }
+                    });
+                }
+            });
+
+            let statsHTML = `
+                <div class="test-result success">
+                    📊 <strong>数据统计</strong><br>
+                    • 主分类: ${totalCategories} 个<br>
+                    • 子分类: ${totalSubcategories} 个<br>
+                    • 书签链接: ${totalLinks} 个
+                </div>
+            `;
+
+            if (emptyCategories.length > 0) {
+                statsHTML += `
+                    <div class="test-result warning">
+                        📋 <strong>空分类 (${emptyCategories.length} 个)</strong><br>
+                        ${emptyCategories.map(cat => `• ${cat}`).join('<br>')}
+                    </div>
+                `;
+            }
+
+            document.getElementById('dataStats').innerHTML = statsHTML;
+        }
+
+        async function runDataTest() {
+            const results = document.getElementById('testResults');
+            results.innerHTML = '<div class="test-result info">正在测试数据完整性...</div>';
+
+            try {
+                if (!bookmarksData) {
+                    await loadDataStats();
+                }
+
+                let testHTML = '';
+
+                // 测试1: 数据结构
+                if (Array.isArray(bookmarksData) && bookmarksData.length > 0) {
+                    testHTML += '<div class="test-result success">✓ 数据结构正确</div>';
+                } else {
+                    testHTML += '<div class="test-result error">✗ 数据结构异常</div>';
+                }
+
+                // 测试2: 必需字段
+                let structureValid = true;
+                bookmarksData.forEach((category, index) => {
+                    if (!category.title || !category.subcategories) {
+                        structureValid = false;
+                    }
+                });
+
+                if (structureValid) {
+                    testHTML += '<div class="test-result success">✓ 所有分类包含必需字段</div>';
+                } else {
+                    testHTML += '<div class="test-result error">✗ 部分分类缺少必需字段</div>';
+                }
+
+                // 测试3: 链接有效性检查
+                let linkCount = 0;
+                let validLinks = 0;
+
+                for (let category of bookmarksData) {
+                    if (category.subcategories) {
+                        for (let subcategory of category.subcategories) {
+                            if (subcategory.links) {
+                                linkCount += subcategory.links.length;
+                                subcategory.links.forEach(link => {
+                                    if (link.url && link.title) {
+                                        validLinks++;
+                                    }
+                                });
+                            }
+                        }
+                    }
+                }
+
+                testHTML += `<div class="test-result success">✓ 有效链接: ${validLinks}/${linkCount}</div>`;
+
+                results.innerHTML = testHTML;
+
+            } catch (error) {
+                results.innerHTML = `<div class="test-result error">测试失败: ${error.message}</div>`;
+            }
+        }
+
+        async function runStructureTest() {
+            const results = document.getElementById('testResults');
+            results.innerHTML = '<div class="test-result info">正在测试导航结构...</div>';
+
+            try {
+                // 测试导航树生成
+                let testHTML = '';
+
+                if (bookmarksData && bookmarksData.length > 0) {
+                    testHTML += '<div class="test-result success">✓ 导航数据可用</div>';
+
+                    // 检查每个分类的图标
+                    let hasIcons = true;
+                    bookmarksData.forEach(category => {
+                        if (category.subcategories) {
+                            category.subcategories.forEach(sub => {
+                                if (!sub.icon) {
+                                    hasIcons = false;
+                                }
+                            });
+                        }
+                    });
+
+                    if (hasIcons) {
+                        testHTML += '<div class="test-result success">✓ 所有子分类都有图标</div>';
+                    } else {
+                        testHTML += '<div class="test-result warning">⚠ 部分子分类缺少图标</div>';
+                    }
+
+                    // 检查分类层级
+                    let maxDepth = 0;
+                    bookmarksData.forEach(category => {
+                        if (category.subcategories && category.subcategories.length > 0) {
+                            maxDepth = Math.max(maxDepth, 2); // 主分类 + 子分类
+                        }
+                    });
+
+                    testHTML += `<div class="test-result info">📊 导航层级深度: ${maxDepth}</div>`;
+                }
+
+                results.innerHTML = testHTML;
+
+            } catch (error) {
+                results.innerHTML = `<div class="test-result error">测试失败: ${error.message}</div>`;
+            }
+        }
+
+        function openMainSite() {
+            window.open('./index.html', '_blank');
+        }
+    </script>
+</body>
+</html>
