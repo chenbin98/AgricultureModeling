@@ -289,6 +289,15 @@ class NavigationApp {
         const searchInput = document.getElementById('searchInput');
         searchInput.addEventListener('input', (e) => {
             this.searchTerm = e.target.value.toLowerCase();
+            // When user types, clear category selection for global search
+            if (this.searchTerm) {
+                if (this.currentCategory) {
+                    this.currentCategory = null;
+                    document.querySelectorAll('.nav-item.active').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                }
+            }
             this.filterBookmarks();
         });
 
@@ -441,6 +450,12 @@ class NavigationApp {
     }
 
     selectCategory(categoryIndex, subcategoryIndex = null) {
+        // Clear search term when selecting a category
+        if (this.searchTerm) {
+            this.searchTerm = '';
+            document.getElementById('searchInput').value = '';
+        }
+
         // 清除之前的选中状态
         document.querySelectorAll('.nav-item.active').forEach(item => {
             item.classList.remove('active');
@@ -483,11 +498,35 @@ class NavigationApp {
 
     filterBookmarks() {
         this.filteredBookmarks = [];
+        const processItems = (items, categoryIndex, subcategoryIndex) => {
+            const itemsWithLocation = items.map((item, itemIndex) => ({
+                ...item,
+                __location: { categoryIndex, subcategoryIndex, itemIndex }
+            }));
 
-        if (this.currentCategory) {
+            if (!this.searchTerm) {
+                return itemsWithLocation;
+            }
+
+            return itemsWithLocation.filter(item =>
+                item.title.toLowerCase().includes(this.searchTerm) ||
+                (item.description && item.description.toLowerCase().includes(this.searchTerm)) ||
+                item.url.toLowerCase().includes(this.searchTerm)
+            );
+        };
+
+        if (this.searchTerm) { // Global Search is active
+            this.bookmarks.forEach((category, catIdx) => {
+                category.subcategories.forEach((sub, subIdx) => {
+                    if (sub.items) {
+                        this.filteredBookmarks.push(...processItems(sub.items, catIdx, subIdx));
+                    }
+                });
+            });
+            document.getElementById('currentCategory').textContent = `搜索结果: "${this.searchTerm}"`;
+        } else if (this.currentCategory) { // No search, category is selected
             const { categoryIndex, subcategoryIndex } = this.currentCategory;
             const category = this.bookmarks[categoryIndex];
-
             if (!category) {
                 console.warn('分类不存在:', categoryIndex);
                 this.renderBookmarks();
@@ -495,49 +534,23 @@ class NavigationApp {
             }
 
             if (subcategoryIndex !== null) {
-                // 选择了子分类
                 const subcategory = category.subcategories[subcategoryIndex];
                 if (subcategory && subcategory.items) {
-                    this.filteredBookmarks = subcategory.items.filter(item =>
-                        this.searchTerm === '' ||
-                        item.title.toLowerCase().includes(this.searchTerm) ||
-                        (item.description && item.description.toLowerCase().includes(this.searchTerm))
-                    );
+                    this.filteredBookmarks = processItems(subcategory.items, categoryIndex, subcategoryIndex);
                 }
-                document.getElementById('currentCategory').textContent =
-                    subcategory ? `${category.category} > ${subcategory.name}` : category.category;
+                document.getElementById('currentCategory').textContent = `${category.category} > ${subcategory.name}`;
             } else {
-                // 选择了主分类，显示所有子分类的内容
-                if (category.subcategories) {
-                    category.subcategories.forEach(subcategory => {
-                        if (subcategory.items && subcategory.items.length > 0) {
-                            const filteredItems = subcategory.items.filter(item =>
-                                this.searchTerm === '' ||
-                                item.title.toLowerCase().includes(this.searchTerm) ||
-                                (item.description && item.description.toLowerCase().includes(this.searchTerm))
-                            );
-                            this.filteredBookmarks.push(...filteredItems);
-                        }
-                    });
-                }
+                category.subcategories.forEach((sub, subIdx) => {
+                    if (sub.items) {
+                        this.filteredBookmarks.push(...processItems(sub.items, categoryIndex, subIdx));
+                    }
+                });
                 document.getElementById('currentCategory').textContent = category.category;
             }
-        } else if (this.searchTerm) {
-            // 全局搜索
-            this.bookmarks.forEach(category => {
-                if (category.subcategories) {
-                    category.subcategories.forEach(subcategory => {
-                        if (subcategory.items && subcategory.items.length > 0) {
-                            const filteredItems = subcategory.items.filter(item =>
-                                item.title.toLowerCase().includes(this.searchTerm) ||
-                                (item.description && item.description.toLowerCase().includes(this.searchTerm))
-                            );
-                            this.filteredBookmarks.push(...filteredItems);
-                        }
-                    });
-                }
-            });
-            document.getElementById('currentCategory').textContent = `搜索结果: "${this.searchTerm}"`;
+        } else {
+            // No search, no category -> Welcome screen
+            this.filteredBookmarks = []; // Ensure welcome screen shows
+            document.getElementById('currentCategory').textContent = '欢迎使用 AgricultureModeling 导航';
         }
 
         this.renderBookmarks();
@@ -602,11 +615,8 @@ class NavigationApp {
     }
 
     createBookmarkCard(bookmark, index) {
-        const card = document.createElement('a');
+        const card = document.createElement('div');
         card.className = 'bookmark-card';
-        card.href = bookmark.url;
-        card.target = '_blank';
-        card.rel = 'noopener noreferrer';
         card.style.animationDelay = `${index * 0.1}s`;
 
         const faviconUrl = this.getFaviconUrl(bookmark.url);
@@ -628,6 +638,13 @@ class NavigationApp {
             ${this.isManageMode ? `<button class="bookmark-manage-btn" data-type="bookmark" data-index="${index}"><i class="fas fa-ellipsis-v"></i></button>` : ''}
         `;
 
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('.bookmark-manage-btn, .drag-handle')) {
+                return;
+            }
+            window.open(bookmark.url, '_blank');
+        });
+
         // 添加管理按钮事件
         if (this.isManageMode) {
             const manageBtn = card.querySelector('.bookmark-manage-btn');
@@ -637,13 +654,17 @@ class NavigationApp {
                     e.stopPropagation();
 
                     const rect = manageBtn.getBoundingClientRect();
+                    const { categoryIndex, subcategoryIndex, itemIndex } = bookmark.__location;
+
                     this.contextMenu.show(rect.left, rect.bottom, manageBtn, 'bookmark',
-                        this.currentCategory.categoryIndex, this.currentCategory.subcategoryIndex, index);
+                        categoryIndex, subcategoryIndex, itemIndex);
                 });
             }
 
             // 添加拖拽事件处理
-            this.dragManager.makeDraggable(card);
+            if (this.dragManager) {
+                this.dragManager.makeDraggable(card);
+            }
         }
 
         return card;
@@ -754,18 +775,9 @@ class NavigationApp {
             body.classList.remove('manage-mode');
         }
 
-        // 保存当前选择状态
-        const currentSelection = this.currentCategory;
-        const currentSubcategory = this.currentSubcategory;
-
         // 重新渲染以显示/隐藏管理按钮
         this.renderNavTree();
-        this.renderBookmarks();
-
-        // 恢复之前的选择状态
-        if (currentSelection !== null) {
-            this.selectCategory(currentSelection.categoryIndex, currentSelection.subcategoryIndex);
-        }
+        this.filterBookmarks();
     }
 
     showAddCategoryModal() {
@@ -837,119 +849,54 @@ class NavigationApp {
     }
 
     showAddBookmarkModal() {
-        if (!this.currentCategory) {
-            alert('请先选择一个分类');
-            return;
+        // Determine initial state
+        const initialCatIndex = this.currentCategory ? this.currentCategory.categoryIndex : null;
+        const initialSubIndex = this.currentCategory ? this.currentCategory.subcategoryIndex : null;
+
+        let categoryOptions = this.bookmarks.map((cat, idx) => `<option value="${idx}">${cat.category}</option>`).join('');
+        if (initialCatIndex !== null) {
+            categoryOptions = this.bookmarks.map((cat, idx) => `<option value="${idx}" ${idx === initialCatIndex ? 'selected' : ''}>${cat.category}</option>`).join('');
         }
 
-        const { categoryIndex, subcategoryIndex } = this.currentCategory;
-        const category = this.bookmarks[categoryIndex];
-        let targetInfo = category.category;
-
-        if (subcategoryIndex !== null) {
-            const subcategory = category.subcategories[subcategoryIndex];
-            targetInfo += ` > ${subcategory.name}`;
-        } else {
-            // 如果选择的是主分类，提供选择子分类的选项，并支持创建新子分类
-            const subcategoryOptions = category.subcategories.map((sub, index) =>
-                `<option value="${index}">${sub.name}</option>`
-            ).join('');
-
-            const modalContent = `
-                <div class="form-group">
-                    <label>所属分类</label>
-                    <input type="text" value="${category.category}" readonly style="background: var(--bg-secondary);">
-                </div>
-                <div class="form-group">
-                    <label for="targetSubcategory">目标子分类</label>
-                    <select id="targetSubcategory" required>
-                        <option value="">请选择子分类</option>
-                        ${subcategoryOptions}
-                        <option value="new">+ 创建新子分类</option>
-                    </select>
-                </div>
-                <div class="form-group" id="newSubcategoryGroup" style="display: none;">
-                    <label for="newSubcategoryName">新子分类名称</label>
-                    <input type="text" id="newSubcategoryName" placeholder="请输入新子分类名称">
-                    <div style="margin-top: 0.5rem;">
-                        <label for="newSubcategoryIcon">选择图标</label>
-                        <div class="icon-selector" id="newSubcategoryIconSelector">
-                            ${this.generateIconOptions()}
-                        </div>
-                        <input type="hidden" id="newSelectedIcon" value="fas fa-folder-open">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="bookmarkTitle">书签标题</label>
-                    <input type="text" id="bookmarkTitle" placeholder="请输入书签标题" required>
-                </div>
-                <div class="form-group">
-                    <label for="bookmarkUrl">网址</label>
-                    <input type="url" id="bookmarkUrl" placeholder="https://" required>
-                </div>
-                <div class="form-group">
-                    <label for="bookmarkDescription">描述（可选）</label>
-                    <textarea id="bookmarkDescription" placeholder="请输入书签描述"></textarea>
-                </div>
-            `;
-
-            this.modalManager.show('添加书签', modalContent, () => {
-                const targetSub = document.getElementById('targetSubcategory').value;
-                const title = document.getElementById('bookmarkTitle').value.trim();
-                const url = document.getElementById('bookmarkUrl').value.trim();
-                const description = document.getElementById('bookmarkDescription').value.trim();
-
-                if (!targetSub || !title || !url) {
-                    alert('请填写所有必填字段');
-                    return false;
-                }
-
-                let targetSubcategoryIndex;
-
-                if (targetSub === 'new') {
-                    // 创建新子分类
-                    const newSubName = document.getElementById('newSubcategoryName').value.trim();
-                    const newSubIcon = document.getElementById('newSelectedIcon').value;
-
-                    if (!newSubName) {
-                        alert('请输入新子分类名称');
-                        return false;
-                    }
-
-                    // 添加新子分类
-                    this.addSubcategory(categoryIndex, newSubName, newSubIcon);
-                    targetSubcategoryIndex = category.subcategories.length - 1; // 最新添加的子分类
-                } else {
-                    targetSubcategoryIndex = parseInt(targetSub);
-                }
-
-                this.addBookmark(categoryIndex, targetSubcategoryIndex, { title, url, description });
-                return true;
-            });
-
-            // 设置子分类选择联动
-            setTimeout(() => {
-                const targetSubcategorySelect = document.getElementById('targetSubcategory');
-                const newSubcategoryGroup = document.getElementById('newSubcategoryGroup');
-
-                targetSubcategorySelect.addEventListener('change', (e) => {
-                    if (e.target.value === 'new') {
-                        newSubcategoryGroup.style.display = 'block';
-                        this.setupIconSelector('newSubcategoryIconSelector', 'newSelectedIcon');
-                    } else {
-                        newSubcategoryGroup.style.display = 'none';
-                    }
-                });
-            }, 100);
-
-            return;
+        let subcategoryOptions = '<option value="">请先选择主分类</option>';
+        if (initialCatIndex !== null) {
+            const subcatOpts = this.bookmarks[initialCatIndex].subcategories.map((sub, idx) => `<option value="${idx}">${sub.name}</option>`);
+            if (initialSubIndex !== null) {
+                subcatOpts[initialSubIndex] = `<option value="${initialSubIndex}" selected>${this.bookmarks[initialCatIndex].subcategories[initialSubIndex].name}</option>`;
+            }
+            subcategoryOptions = subcatOpts.join('');
         }
 
         const modalContent = `
             <div class="form-group">
-                <label>所属分类</label>
-                <input type="text" value="${targetInfo}" readonly style="background: var(--bg-secondary);">
+                <label for="targetCategory">主分类</label>
+                <select id="targetCategory" required>
+                    ${initialCatIndex === null ? '<option value="">请选择主分类</option>' : ''}
+                    ${categoryOptions}
+                    <option value="new">+ 创建新主分类</option>
+                </select>
             </div>
+            <div class="form-group" id="newCategoryGroup" style="display: none;">
+                <label for="newCategoryName">新主分类名称</label>
+                <input type="text" id="newCategoryName" placeholder="请输入新主分类名称">
+            </div>
+            <div class="form-group">
+                <label for="targetSubcategory">子分类</label>
+                <select id="targetSubcategory" required>
+                    ${subcategoryOptions}
+                    <option value="new">+ 创建新子分类</option>
+                </select>
+            </div>
+            <div class="form-group" id="newSubcategoryGroup" style="display: none;">
+                <label for="newSubcategoryName">新子分类名称</label>
+                <input type="text" id="newSubcategoryName" placeholder="请输入新子分类名称">
+                <div style="margin-top: 0.5rem;">
+                    <label>选择图标</label>
+                    <div class="icon-selector" id="newSubcategoryIconSelector">${this.generateIconOptions()}</div>
+                    <input type="hidden" id="newSelectedIcon" value="fas fa-folder-open">
+                </div>
+            </div>
+            <hr>
             <div class="form-group">
                 <label for="bookmarkTitle">书签标题</label>
                 <input type="text" id="bookmarkTitle" placeholder="请输入书签标题" required>
@@ -965,18 +912,79 @@ class NavigationApp {
         `;
 
         this.modalManager.show('添加书签', modalContent, () => {
+            let catIndexValue = document.getElementById('targetCategory').value;
+            let subIndexValue = document.getElementById('targetSubcategory').value;
+
+            if (catIndexValue === 'new') {
+                const newCatName = document.getElementById('newCategoryName').value.trim();
+                if (!newCatName) { alert('请输入新主分类名称'); return false; }
+                this.addCategory(newCatName, 'fas fa-folder');
+                catIndexValue = this.bookmarks.length - 1;
+            }
+
+            let catIndex = parseInt(catIndexValue);
+
+            if (subIndexValue === 'new') {
+                const newSubName = document.getElementById('newSubcategoryName').value.trim();
+                const newSubIcon = document.getElementById('newSelectedIcon').value;
+                if (!newSubName) { alert('请输入新子分类名称'); return false; }
+                this.addSubcategory(catIndex, newSubName, newSubIcon);
+                subIndexValue = this.bookmarks[catIndex].subcategories.length - 1;
+            }
+
+            let subIndex = parseInt(subIndexValue);
+
+            if (isNaN(catIndex) || isNaN(subIndex)) {
+                alert('请选择一个有效的分类和子分类');
+                return false;
+            }
+
             const title = document.getElementById('bookmarkTitle').value.trim();
             const url = document.getElementById('bookmarkUrl').value.trim();
             const description = document.getElementById('bookmarkDescription').value.trim();
 
-            if (!title || !url) {
-                alert('请填写标题和网址');
-                return false;
-            }
+            if (!title || !url) { alert('请填写标题和网址'); return false; }
 
-            this.addBookmark(categoryIndex, subcategoryIndex, { title, url, description });
+            this.addBookmark(catIndex, subIndex, { title, url, description });
             return true;
         });
+
+        setTimeout(() => {
+            const catSelect = document.getElementById('targetCategory');
+            const subSelect = document.getElementById('targetSubcategory');
+            const newCatGroup = document.getElementById('newCategoryGroup');
+            const newSubGroup = document.getElementById('newSubcategoryGroup');
+
+            const updateSubcategories = () => {
+                const selectedCatIndex = catSelect.value;
+                newSubGroup.style.display = 'none';
+                if (selectedCatIndex === 'new' || selectedCatIndex === '') {
+                    newCatGroup.style.display = selectedCatIndex === 'new' ? 'block' : 'none';
+                    subSelect.innerHTML = '<option value="">请先选择主分类</option><option value="new">+ 创建新子分类</option>';
+                    if(selectedCatIndex === 'new') {
+                        subSelect.value = 'new';
+                        subSelect.dispatchEvent(new Event('change'));
+                    }
+                } else {
+                    newCatGroup.style.display = 'none';
+                    const newSubOptions = this.bookmarks[selectedCatIndex].subcategories.map((sub, idx) => `<option value="${idx}">${sub.name}</option>`).join('');
+                    subSelect.innerHTML = newSubOptions + '<option value="new">+ 创建新子分类</option>';
+                }
+            };
+
+            catSelect.addEventListener('change', updateSubcategories);
+            subSelect.addEventListener('change', () => {
+                if (subSelect.value === 'new') {
+                    newSubGroup.style.display = 'block';
+                    this.setupIconSelector('newSubcategoryIconSelector', 'newSelectedIcon');
+                } else {
+                    newSubGroup.style.display = 'none';
+                }
+            });
+
+            if (initialCatIndex === null) updateSubcategories();
+            if (subSelect.value === 'new') subSelect.dispatchEvent(new Event('change'));
+        }, 100);
     }
 
     generateIconOptions() {
@@ -1342,15 +1350,39 @@ class NavigationApp {
     }
 
     showEditBookmarkModal(categoryIndex, subcategoryIndex, itemIndex) {
-        const category = this.bookmarks[categoryIndex];
-        const subcategory = category.subcategories[subcategoryIndex];
-        const bookmark = subcategory.items[itemIndex];
+        const bookmark = this.bookmarks[categoryIndex].subcategories[subcategoryIndex].items[itemIndex];
+
+        const categoryOptions = this.bookmarks.map((cat, idx) =>
+            `<option value="${idx}" ${idx === categoryIndex ? 'selected' : ''}>${cat.category}</option>`
+        ).join('');
+
+        const subcategoryOptions = this.bookmarks[categoryIndex].subcategories.map((sub, idx) =>
+            `<option value="${idx}" ${idx === subcategoryIndex ? 'selected' : ''}>${sub.name}</option>`
+        ).join('');
 
         const modalContent = `
             <div class="form-group">
-                <label>所属分类</label>
-                <input type="text" value="${category.category} > ${subcategory.name}" readonly style="background: var(--bg-secondary);">
+                <label for="targetCategory">主分类</label>
+                <select id="targetCategory">${categoryOptions}<option value="new">+ 创建新主分类</option></select>
             </div>
+            <div class="form-group" id="newCategoryGroup" style="display: none;">
+                <label for="newCategoryName">新主分类名称</label>
+                <input type="text" id="newCategoryName" placeholder="请输入新主分类名称">
+            </div>
+            <div class="form-group">
+                <label for="targetSubcategory">子分类</label>
+                <select id="targetSubcategory">${subcategoryOptions}<option value="new">+ 创建新子分类</option></select>
+            </div>
+            <div class="form-group" id="newSubcategoryGroup" style="display: none;">
+                <label for="newSubcategoryName">新子分类名称</label>
+                <input type="text" id="newSubcategoryName" placeholder="请输入新子分类名称">
+                <div style="margin-top: 0.5rem;">
+                    <label>选择图标</label>
+                    <div class="icon-selector" id="newSubcategoryIconSelector">${this.generateIconOptions()}</div>
+                    <input type="hidden" id="newSelectedIcon" value="fas fa-folder-open">
+                </div>
+            </div>
+            <hr>
             <div class="form-group">
                 <label for="editBookmarkTitle">书签标题</label>
                 <input type="text" id="editBookmarkTitle" value="${bookmark.title}" required>
@@ -1366,6 +1398,33 @@ class NavigationApp {
         `;
 
         this.modalManager.show('编辑书签', modalContent, () => {
+            let newCatIndexValue = document.getElementById('targetCategory').value;
+            let newSubIndexValue = document.getElementById('targetSubcategory').value;
+
+            if (newCatIndexValue === 'new') {
+                const newCatName = document.getElementById('newCategoryName').value.trim();
+                if (!newCatName) { alert('请输入新主分类名称'); return false; }
+                this.addCategory(newCatName, 'fas fa-folder');
+                newCatIndexValue = this.bookmarks.length - 1;
+            }
+            
+            let newCatIndex = parseInt(newCatIndexValue);
+
+            if (newSubIndexValue === 'new') {
+                const newSubName = document.getElementById('newSubcategoryName').value.trim();
+                const newSubIcon = document.getElementById('newSelectedIcon').value;
+                if (!newSubName) { alert('请输入新子分类名称'); return false; }
+                this.addSubcategory(newCatIndex, newSubName, newSubIcon);
+                newSubIndexValue = this.bookmarks[newCatIndex].subcategories.length - 1;
+            }
+
+            let newSubIndex = parseInt(newSubIndexValue);
+
+            if (isNaN(newCatIndex) || isNaN(newSubIndex)) {
+                alert('请选择一个有效的分类和子分类');
+                return false;
+            }
+
             const title = document.getElementById('editBookmarkTitle').value.trim();
             const url = document.getElementById('editBookmarkUrl').value.trim();
             const description = document.getElementById('editBookmarkDescription').value.trim();
@@ -1375,9 +1434,57 @@ class NavigationApp {
                 return false;
             }
 
-            this.updateBookmark(categoryIndex, subcategoryIndex, itemIndex, { title, url, description });
+            const bookmarkData = { title, url, description };
+
+            if (newCatIndex === categoryIndex && newSubIndex === subcategoryIndex) {
+                this.updateBookmark(categoryIndex, subcategoryIndex, itemIndex, bookmarkData);
+            } else {
+                const [movedBookmark] = this.bookmarks[categoryIndex].subcategories[subcategoryIndex].items.splice(itemIndex, 1);
+                movedBookmark.title = title;
+                movedBookmark.url = url;
+                movedBookmark.description = description;
+                this.bookmarks[newCatIndex].subcategories[newSubIndex].items.push(movedBookmark);
+                this.saveData();
+                this.renderNavTree();
+                this.updateStats();
+                this.filterBookmarks();
+            }
             return true;
         });
+
+        setTimeout(() => {
+            const catSelect = document.getElementById('targetCategory');
+            const subSelect = document.getElementById('targetSubcategory');
+            const newCatGroup = document.getElementById('newCategoryGroup');
+            const newSubGroup = document.getElementById('newSubcategoryGroup');
+
+            const updateSubcategories = () => {
+                const selectedCatIndex = catSelect.value;
+                newSubGroup.style.display = 'none';
+                if (selectedCatIndex === 'new' || selectedCatIndex === '') {
+                    newCatGroup.style.display = selectedCatIndex === 'new' ? 'block' : 'none';
+                    subSelect.innerHTML = '<option value="">请先选择主分类</option><option value="new">+ 创建新子分类</option>';
+                    if(selectedCatIndex === 'new') {
+                        subSelect.value = 'new';
+                        subSelect.dispatchEvent(new Event('change'));
+                    }
+                } else {
+                    newCatGroup.style.display = 'none';
+                    const newSubOptions = this.bookmarks[selectedCatIndex].subcategories.map((sub, idx) => `<option value="${idx}">${sub.name}</option>`).join('');
+                    subSelect.innerHTML = newSubOptions + '<option value="new">+ 创建新子分类</option>';
+                }
+            };
+
+            catSelect.addEventListener('change', updateSubcategories);
+            subSelect.addEventListener('change', () => {
+                if (subSelect.value === 'new') {
+                    newSubGroup.style.display = 'block';
+                    this.setupIconSelector('newSubcategoryIconSelector', 'newSelectedIcon');
+                } else {
+                    newSubGroup.style.display = 'none';
+                }
+            });
+        }, 100);
     }
 
     updateCategory(categoryIndex, newName) {
