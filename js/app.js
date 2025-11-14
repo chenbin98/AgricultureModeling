@@ -10,11 +10,15 @@ class NavigationApp {
         this.modalManager = null;
         this.contextMenu = null;
         this.dragManager = null;
+        this.gistId = null;
+        this.gistPat = null;
+        this.lastSync = null;
         this.init();
     }
 
     async init() {
         this.showLoading();
+        this.loadGistSettings();
         await this.loadBookmarks();
         this.setupEventListeners();
         this.initializeManagementFeatures();
@@ -30,6 +34,12 @@ class NavigationApp {
             console.error('加载书签失败:', error);
             this.bookmarks = this.getBookmarksData();
         }
+    }
+
+    loadGistSettings() {
+        this.gistId = localStorage.getItem('agri_gist_id');
+        this.gistPat = localStorage.getItem('agri_gist_pat');
+        this.lastSync = localStorage.getItem('agri_last_sync');
     }
 
     getBookmarksData() {
@@ -305,6 +315,12 @@ class NavigationApp {
         const themeToggle = document.getElementById('themeToggle');
         themeToggle.addEventListener('click', () => {
             this.toggleTheme();
+        });
+
+        // 云同步设置
+        const syncSettingsBtn = document.getElementById('syncSettingsBtn');
+        syncSettingsBtn.addEventListener('click', () => {
+            this.showSyncSettingsModal();
         });
 
         // 侧边栏切换（移动端）
@@ -780,6 +796,54 @@ class NavigationApp {
         this.filterBookmarks();
     }
 
+    showSyncSettingsModal() {
+        const lastSyncDate = this.lastSync ? new Date(this.lastSync).toLocaleString() : '从未';
+        const modalContent = `
+            <div class="form-group">
+                <label for="gistId">GitHub Gist ID</label>
+                <input type="text" id="gistId" value="${this.gistId || ''}" placeholder="输入你的 Gist ID">
+            </div>
+            <div class="form-group">
+                <label for="gistPat">GitHub Personal Access Token (PAT)</label>
+                <input type="password" id="gistPat" value="${this.gistPat || ''}" placeholder="输入你的 PAT">
+                <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">令牌将仅保存在你的浏览器本地存储中。</p>
+            </div>
+            <hr>
+            <div style="font-size: 0.9rem; color: var(--text-secondary);">
+                <p>上次同步时间: <span id="lastSyncTime">${lastSyncDate}</span></p>
+            </div>
+        `;
+
+        this.modalManager.show('云同步设置', modalContent, () => {
+            const gistId = document.getElementById('gistId').value.trim();
+            const gistPat = document.getElementById('gistPat').value.trim();
+
+            if (!gistId || !gistPat) {
+                alert('请同时提供 Gist ID 和 Personal Access Token。');
+                return false;
+            }
+
+            this.gistId = gistId;
+            this.gistPat = gistPat;
+
+            localStorage.setItem('agri_gist_id', this.gistId);
+            localStorage.setItem('agri_gist_pat', this.gistPat);
+
+            alert('设置已保存。正在尝试从云端同步数据...');
+
+            // Trigger a sync and reload
+            this.loadData().then(data => {
+                this.bookmarks = data;
+                this.renderNavTree();
+                this.filterBookmarks();
+                this.updateStats();
+                document.getElementById('lastSyncTime').textContent = new Date().toLocaleString();
+            });
+
+            return true;
+        });
+    }
+
     showAddCategoryModal() {
         const modalContent = `
             <div class="form-group">
@@ -1120,7 +1184,6 @@ class NavigationApp {
     }
 
     saveData() {
-        // 将数据转换为适合保存的格式
         const dataToSave = this.bookmarks.map(category => ({
             title: category.category,
             icon: 'fas fa-folder',
@@ -1135,24 +1198,107 @@ class NavigationApp {
             }))
         }));
 
-        // 保存到localStorage
-        localStorage.setItem('agri_bookmarks', JSON.stringify(dataToSave));
+        const jsonString = JSON.stringify(dataToSave, null, 2);
+
+        // Save to localStorage as a local backup
+        localStorage.setItem('agri_bookmarks', jsonString);
+
+        // Save to Gist if configured
+        if (this.gistId && this.gistPat) {
+            this._updateGist(jsonString).then(() => {
+                console.log('同步到 Gist 成功');
+                this.lastSync = new Date().toISOString();
+                localStorage.setItem('agri_last_sync', this.lastSync);
+            }).catch(error => {
+                console.error('同步到 Gist 失败:', error);
+                alert('同步到云端失败，数据已保存到本地。');
+            });
+        }
     }
 
     async loadData() {
+        // 1. Try to load from Gist
+        if (this.gistId && this.gistPat) {
+            try {
+                console.log('尝试从 Gist 加载数据...');
+                const gistData = await this._getGist();
+                if (gistData) {
+                    console.log('从 Gist 加载成功');
+                    // Also save to local storage to ensure offline access
+                    localStorage.setItem('agri_bookmarks', JSON.stringify(gistData));
+                    this.lastSync = new Date().toISOString();
+                    localStorage.setItem('agri_last_sync', this.lastSync);
+                    return this.convertDataFormat(gistData);
+                }
+            } catch (error) {
+                console.error('从 Gist 加载失败:', error);
+                alert('从云端加载数据失败，将尝试使用本地缓存。');
+            }
+        }
+
+        // 2. Try to load from localStorage
         try {
-            // 先尝试从localStorage加载
             const savedData = localStorage.getItem('agri_bookmarks');
             if (savedData) {
+                console.log('从 localStorage 加载数据');
                 const data = JSON.parse(savedData);
                 return this.convertDataFormat(data);
             }
         } catch (error) {
-            console.warn('从localStorage加载数据失败:', error);
+            console.warn('从 localStorage 加载数据失败:', error);
         }
 
-        // 如果localStorage没有数据，从JSON文件加载
+        // 3. Fallback to local JSON file
+        console.log('从本地 bookmarks.json 文件加载数据');
         return this.loadBookmarksFromFile();
+    }
+
+    async _getGist() {
+        if (!this.gistId || !this.gistPat) return null;
+
+        const response = await fetch(`https://api.github.com/gists/${this.gistId}`, {
+            headers: {
+                'Authorization': `token ${this.gistPat}`,
+                'Accept': 'application/vnd.github.v3+json',
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`GitHub API 错误: ${response.status} ${response.statusText}`);
+        }
+
+        const gist = await response.json();
+        const filename = 'bookmarks.json';
+        if (gist.files && gist.files[filename]) {
+            const content = gist.files[filename].content;
+            return JSON.parse(content);
+        }
+        return null; // File not found in Gist
+    }
+
+    async _updateGist(content) {
+        if (!this.gistId || !this.gistPat) return;
+
+        const filename = 'bookmarks.json';
+        const response = await fetch(`https://api.github.com/gists/${this.gistId}`, {
+            method: 'PATCH',
+            headers: {
+                'Authorization': `token ${this.gistPat}`,
+                'Accept': 'application/vnd.github.v3+json',
+            },
+            body: JSON.stringify({
+                files: {
+                    [filename]: {
+                        content: content,
+                    },
+                },
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error(`GitHub API 错误: ${response.status} ${response.statusText}`);
+        }
+        return await response.json();
     }
 
     async loadBookmarksFromFile() {
