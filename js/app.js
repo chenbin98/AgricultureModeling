@@ -1218,12 +1218,35 @@ class NavigationApp {
                 console.log('同步到 Gist 成功');
                 this.lastSync = new Date().toISOString();
                 localStorage.setItem('agri_last_sync', this.lastSync);
-                alert('同步成功');
+                // No success alert
             }).catch(error => {
                 console.error('同步到 Gist 失败:', error);
-                alert('同步到云端失败，数据已保存到本地。');
+                this.showToast('同步到云端失败，数据已保存到本地。', true);
             });
         }
+    }
+
+    showToast(message, isError = false) {
+        const toast = document.createElement('div');
+        toast.className = `toast ${isError ? 'toast-error' : ''}`;
+        toast.textContent = message;
+
+        document.body.appendChild(toast);
+
+        // Animate in
+        setTimeout(() => {
+            toast.classList.add('show');
+        }, 100);
+
+        // Animate out and remove
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.parentNode.removeChild(toast);
+                }
+            }, 500); // Wait for fade out transition
+        }, 3000); // Show for 3 seconds
     }
 
     async loadData() {
@@ -1884,7 +1907,7 @@ class ContextMenuManager {
                 break;
 
             case 'edit':
-                this.handleEdit(type, categoryIndex, subcategoryIndex);
+                this.handleEdit(type, categoryIndex, subcategoryIndex, itemIndex);
                 break;
 
             case 'delete':
@@ -1893,13 +1916,12 @@ class ContextMenuManager {
         }
     }
 
-    handleEdit(type, categoryIndex, subcategoryIndex) {
+    handleEdit(type, categoryIndex, subcategoryIndex, itemIndex) {
         if (type === 'category') {
             this.app.showEditCategoryModal(categoryIndex);
         } else if (type === 'subcategory') {
             this.app.showEditSubcategoryModal(categoryIndex, subcategoryIndex);
         } else if (type === 'bookmark') {
-            const itemIndex = this.currentTarget.itemIndex;
             this.app.showEditBookmarkModal(categoryIndex, subcategoryIndex, itemIndex);
         }
     }

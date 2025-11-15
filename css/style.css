@@ -957,6 +957,59 @@ body {
 }
 
 .context-menu-item:last-child {
+
     border-bottom-left-radius: 5px;
+
     border-bottom-right-radius: 5px;
+
+}
+
+
+
+/* Toast Notification */
+
+.toast {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    background-color: var(--primary-color);
+
+    color: white;
+
+    padding: 1rem 1.5rem;
+
+    border-radius: 5px;
+
+    box-shadow: var(--shadow-medium);
+
+    z-index: 2000;
+
+    opacity: 0;
+
+    transform: translateX(100%);
+
+    transition: all 0.5s ease;
+
+}
+
+
+
+.toast.show {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+
+.toast.toast-error {
+
+    background-color: #d32f2f; /* A standard error red */
+
 }
