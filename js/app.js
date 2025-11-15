@@ -1874,7 +1874,7 @@ class ContextMenuManager {
     }
 
     handleAction(action) {
-        const { type, categoryIndex, subcategoryIndex } = this.currentTarget;
+        const { type, categoryIndex, subcategoryIndex, itemIndex } = this.currentTarget;
 
         switch (action) {
             case 'add-subcategory':
@@ -1888,7 +1888,7 @@ class ContextMenuManager {
                 break;
 
             case 'delete':
-                this.handleDelete(type, categoryIndex, subcategoryIndex);
+                this.handleDelete(type, categoryIndex, subcategoryIndex, itemIndex);
                 break;
         }
     }
@@ -1904,15 +1904,15 @@ class ContextMenuManager {
         }
     }
 
-    handleDelete(type, categoryIndex, subcategoryIndex) {
-        const confirmMessage = this.getDeleteConfirmMessage(type, categoryIndex, subcategoryIndex);
+    handleDelete(type, categoryIndex, subcategoryIndex, itemIndex) {
+        const confirmMessage = this.getDeleteConfirmMessage(type, categoryIndex, subcategoryIndex, itemIndex);
 
         if (confirm(confirmMessage)) {
-            this.app.deleteItem(type, categoryIndex, subcategoryIndex);
+            this.app.deleteItem(type, categoryIndex, subcategoryIndex, itemIndex);
         }
     }
 
-    getDeleteConfirmMessage(type, categoryIndex, subcategoryIndex) {
+    getDeleteConfirmMessage(type, categoryIndex, subcategoryIndex, itemIndex) {
         if (type === 'category') {
             const category = this.app.bookmarks[categoryIndex];
             return `确定要删除分类"${category.category}"吗？这将删除该分类下的所有子分类和书签！`;
@@ -1921,7 +1921,8 @@ class ContextMenuManager {
             const subcategory = category.subcategories[subcategoryIndex];
             return `确定要删除子分类"${subcategory.name}"吗？这将删除该子分类下的所有书签！`;
         } else if (type === 'bookmark') {
-            return '确定要删除这个书签吗？';
+            const bookmark = this.app.bookmarks[categoryIndex].subcategories[subcategoryIndex].items[itemIndex];
+            return `确定要删除书签"${bookmark.title}"吗？`;
         }
 
         return '确定要删除吗？';
