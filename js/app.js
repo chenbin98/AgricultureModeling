@@ -13,7 +13,53 @@ class NavigationApp {
         this.gistId = null;
         this.gistPat = null;
         this.lastSync = null;
+
+        // 彻底拦截所有成功相关的弹窗
+        this.setupAlertInterceptor();
+
         this.init();
+    }
+
+    setupAlertInterceptor() {
+        // 保存原始alert函数
+        const originalAlert = window.alert;
+
+        // 重写alert函数
+        window.alert = function(message) {
+            console.log('Alert被调用，消息:', message);
+            console.trace(); // 打印调用栈
+
+            const str = String(message || '');
+
+            // 阻止成功相关的提示
+            if (str.includes('成功') ||
+                str.includes('同步成功') ||
+                str.includes('success') ||
+                str.includes('Success')) {
+                console.warn('🚫 已阻止成功提示:', message);
+                return; // 完全不显示
+            }
+
+            // 允许重要提示显示
+            const importantKeywords = ['请', '错误', '失败', '无效', '格式', '选择', '输入', '填写'];
+            const isImportant = importantKeywords.some(keyword => str.includes(keyword));
+
+            if (isImportant) {
+                return originalAlert.call(this, message); // 显示重要提示
+            }
+
+            console.warn('🚫 已阻止其他弹窗:', message);
+        };
+
+        // 同时拦截confirm
+        const originalConfirm = window.confirm;
+        window.confirm = function(message) {
+            console.log('Confirm被调用:', message);
+            if (String(message || '').includes('删除')) {
+                return originalConfirm.call(window, message); // 保留删除确认
+            }
+            return true; // 其他情况默认确认
+        };
     }
 
     async init() {
@@ -319,13 +365,16 @@ class NavigationApp {
 
         // 云同步设置
         const syncSettingsBtn = document.getElementById('syncSettingsBtn');
-        syncSettingsBtn.addEventListener('click', () => {
-            if (this.gistId && this.gistPat) {
-                this.syncData();
-            } else {
+        if (syncSettingsBtn) {
+            console.log('找到云同步按钮，添加事件监听器');
+            syncSettingsBtn.addEventListener('click', () => {
+                console.log('云同步按钮被点击，gistId:', this.gistId, 'gistPat:', !!this.gistPat);
+                // 始终显示设置对话框，允许用户修改或查看设置
                 this.showSyncSettingsModal();
-            }
-        });
+            });
+        } else {
+            console.error('未找到云同步按钮元素！');
+        }
 
         // 侧边栏切换（移动端）
         const sidebarToggle = document.getElementById('sidebarToggle');
@@ -519,6 +568,7 @@ class NavigationApp {
     filterBookmarks() {
         this.filteredBookmarks = [];
         const processItems = (items, categoryIndex, subcategoryIndex) => {
+            // 先添加位置信息，保持原始索引
             const itemsWithLocation = items.map((item, itemIndex) => ({
                 ...item,
                 __location: { categoryIndex, subcategoryIndex, itemIndex }
@@ -528,6 +578,7 @@ class NavigationApp {
                 return itemsWithLocation;
             }
 
+            // 过滤时保持原始索引不变
             return itemsWithLocation.filter(item =>
                 item.title.toLowerCase().includes(this.searchTerm) ||
                 (item.description && item.description.toLowerCase().includes(this.searchTerm)) ||
@@ -801,11 +852,12 @@ class NavigationApp {
     }
 
     syncData() {
-        alert('正在同步...');
+        // 静默同步，不显示提示框
         this.saveData();
     }
 
     showSyncSettingsModal() {
+        console.log('showSyncSettingsModal 被调用');
         const lastSyncDate = this.lastSync ? new Date(this.lastSync).toLocaleString() : '从未';
         const modalContent = `
             <div class="form-group">
@@ -823,6 +875,12 @@ class NavigationApp {
             </div>
         `;
 
+        console.log('modalManager存在:', !!this.modalManager);
+        if (!this.modalManager) {
+            console.error('modalManager未初始化！');
+            return;
+        }
+
         this.modalManager.show('云同步设置', modalContent, () => {
             const gistId = document.getElementById('gistId').value.trim();
             const gistPat = document.getElementById('gistPat').value.trim();
@@ -838,8 +896,7 @@ class NavigationApp {
             localStorage.setItem('agri_gist_id', this.gistId);
             localStorage.setItem('agri_gist_pat', this.gistPat);
 
-            alert('设置已保存。正在尝试从云端同步数据...');
-
+            // 静默处理设置保存，不显示提示框
             // Trigger a sync and reload
             this.loadData().then(data => {
                 this.bookmarks = data;
@@ -847,6 +904,9 @@ class NavigationApp {
                 this.filterBookmarks();
                 this.updateStats();
                 document.getElementById('lastSyncTime').textContent = new Date().toLocaleString();
+            }).catch(error => {
+                console.error('同步数据时出错:', error);
+                this.showToast('同步数据失败，请检查网络连接', true);
             });
 
             return true;
@@ -1164,9 +1224,10 @@ class NavigationApp {
 
         this.bookmarks[categoryIndex].subcategories[subcategoryIndex].items.push(newBookmark);
         this.saveData();
+        this.renderNavTree(); // 更新导航树以显示新的书签计数
         this.updateStats();
 
-        // 如果当前显示的就是这个分类，重新渲染
+        // 如果当前显示的就是这个分类，重新渲染书签列表
         if (this.currentCategory &&
             this.currentCategory.categoryIndex === categoryIndex &&
             this.currentCategory.subcategoryIndex === subcategoryIndex) {
@@ -1209,20 +1270,24 @@ class NavigationApp {
 
         const jsonString = JSON.stringify(dataToSave, null, 2);
 
-        // Save to localStorage as a local backup
+        // 只保存到本地存储
         localStorage.setItem('agri_bookmarks', jsonString);
 
-        // Save to Gist if configured
+        // 后台静默同步到云端（如果配置了）
         if (this.gistId && this.gistPat) {
-            this._updateGist(jsonString).then(() => {
-                console.log('同步到 Gist 成功');
-                this.lastSync = new Date().toISOString();
-                localStorage.setItem('agri_last_sync', this.lastSync);
-                // No success alert
-            }).catch(error => {
-                console.error('同步到 Gist 失败:', error);
-                this.showToast('同步到云端失败，数据已保存到本地。', true);
-            });
+            this._silentUpdateGist(jsonString);
+        }
+    }
+
+    async _silentUpdateGist(content) {
+        try {
+            await this._updateGist(content);
+            console.log('数据已静默同步到云端');
+            this.lastSync = new Date().toISOString();
+            localStorage.setItem('agri_last_sync', this.lastSync);
+        } catch (error) {
+            console.error('静默同步失败:', error);
+            // 静默失败，不显示任何提示
         }
     }
 
